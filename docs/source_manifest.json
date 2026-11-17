@@ -761,6 +761,7 @@
   ],
   "generated_files": [
     ".gitignore",
+    "LICENSE",
     "README.md",
     "configs/__init__.py",
     "docs/data_contract.md",

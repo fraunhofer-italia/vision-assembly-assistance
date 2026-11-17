@@ -20,12 +20,12 @@ Original copied-file hashes are recorded in `source_manifest.json`. Text line en
 
 - The original analysis environment is unavailable. The pinned verification versions are a newly prepared check environment, not recovered study versions. Optional RF-DETR/YOLO/MediaPipe/DepthAI execution needs its own resolved environment and asset-dependent verification.
 - Missing external assets: actual study/expert recordings and full telemetry, calibration, CAD/generator, real/synthetic detector data and splits, pose crops/splits, deployed detector/classifier weights and looping guidance clips. Their sizes, consent and rights remain to be checked.
-- Company ownership and project/dependency/model licenses need approval; see `licensing.md`.
+- The owner selected MIT for the project's original code. External dependency/model and CAD rights remain subject to their respective terms; see `licensing.md`.
 - The source paper/configuration differences identified in the internal release plan remain open: advisory pose gate in study metadata, manual advancement logging provenance, baseline versus mixed detector data, one missing interruption entry, and the outlier-participant count. Current defaults and analyses were preserved rather than silently changed.
 - A synthetic demo validates only its supported subset. Successful unit checks do not establish full camera/model operation or reproduction of the paper's results.
 
 ## Repository settings
 
-The owner created `https://github.com/fraunhofer-italia/vision-assembly-assistance`, verified private and empty before the initial import. Only this candidate folder belongs in that repository. The surrounding workspace, archives, original history and internal release plan are excluded. The company license decision remains open.
+The owner created `https://github.com/fraunhofer-italia/vision-assembly-assistance`, verified private and empty before the initial import, and subsequently selected MIT for the original project source. Only this candidate folder belongs in that repository. The surrounding workspace, archives, original history and internal release plan are excluded.
 
-The owner authorized the initial private upload by supplying this repository URL after reviewing the prepared candidate. Public publication and any data/model release remain separate decisions; keep the repository private while licensing and missing-asset issues are resolved.
+The owner authorized the initial private upload by supplying this repository URL after reviewing the prepared candidate. Public publication and any data/model release remain separate decisions; keep the repository private until those decisions and the missing-asset issues are resolved.

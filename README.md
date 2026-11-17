@@ -2,7 +2,7 @@
 
 Code for single-overhead-camera pneumatic piston assembly/disassembly verification: MediaPipe hand tracking, regional interaction triggers, MotionFSM/StageFSM, FastDTW reference comparison, RF-DETR detection, task-specific pose classification and full/mid/no guidance.
 
-This is a **local code-only release candidate**, prepared for a new private company repository. No data, models, videos, private submodules or Git history are included. License approval and missing study assets remain open; see [release status](docs/release_status.md). There is no public release or HF download URL yet.
+This is a **code-only release candidate** in the private company repository. The project's original source code is licensed under the [MIT License](LICENSE). No data, models, videos, private submodules or original Git history are included. Missing study assets and third-party/model terms remain documented in [release status](docs/release_status.md). There is no public release or HF download URL yet.
 
 ## Install and checks
 
@@ -58,4 +58,4 @@ RF-DETR training uses `scripts/train_rfdetr_detector.py`; pose crop extraction, 
 - `tests/`: relevant existing unit tests and checks for numeric participant joins.
 - `docs/source_manifest.json`: original file hashes and candidate modifications.
 
-The core perception/FSM algorithms are preserved. Changes and remaining assets are listed in [release status](docs/release_status.md). Publishing requires an approved project license; no license has been inferred from a dependency's license.
+The core perception/FSM algorithms are preserved. Changes and remaining assets are listed in [release status](docs/release_status.md). MIT covers the project's original code; third-party dependencies and model weights retain their own licenses. In particular, the optional Ultralytics path remains subject to its AGPL-3.0 or applicable Enterprise terms; see [licensing](docs/licensing.md).

@@ -75,7 +75,7 @@ def main() -> int:
         print("\n".join(f"- {problem}" for problem in problems))
         return 1
     print(f"Release-content check passed: {checked} files; no forbidden assets or configured text matches.")
-    print("License/consent decisions and missing external assets remain separate release requirements.")
+    print("Third-party rights, consent and missing external assets remain separate release requirements.")
     return 0
 
 
