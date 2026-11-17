@@ -1,0 +1,844 @@
+{
+  "schema_version": "1.2",
+  "description": "Pneumatic piston stage-segmentation contract descriptors for FSM v2 (assembly + dismantle).",
+  "notes": [
+    "Assembly stage A07 intentionally merges tool tightening (old step 7) and subassembly insertion (old step 8) for robust segmentation.",
+    "Use region IDs from configs/regions_v2.json. Tune cooldown and hand_scope per stage after pilot runs."
+  ],
+  "modes": {
+    "dismantle": {
+      "stages": [
+        {
+          "stage_name": "D01_remove_piston_rod_nut_drop",
+          "manual_start_allowed": true,
+          "start_tool_regions": [],
+          "completion_regions": [
+            "box_piston_rod_nut"
+          ],
+          "completion_roles": [
+            "part_drop"
+          ],
+          "cooldown_frames": 1,
+          "hand_scope": "any",
+          "expected_parts": [
+            "nut",
+            "tie_rod_assembly",
+            "front_cover",
+            "piston_rod"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "nut"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "enforce_active_part_match": false,
+          "enforce_active_tool_match": false
+        },
+        {
+          "stage_name": "D02_large_l_tool_unscrew_and_drop",
+          "manual_start_allowed": false,
+          "start_tool_regions": [
+            "box_tools_pair"
+          ],
+          "completion_regions": [
+            "box_tools_pair"
+          ],
+          "completion_roles": [
+            "tool_drop"
+          ],
+          "cooldown_frames": 8,
+          "hand_scope": "any",
+          "min_stage_valid_time": 6.0,
+          "expected_parts": [
+            "tie_rod_assembly",
+            "front_cover",
+            "piston_rod"
+          ],
+          "expected_tools": [
+            "screwdriver_large_l"
+          ],
+          "active_part_candidates": [
+            "NONE"
+          ],
+          "active_tool_candidates": [
+            "screwdriver_large_l"
+          ],
+          "enforce_active_part_match": false,
+          "enforce_active_tool_match": true
+        },
+        {
+          "stage_name": "D03_remove_tie_rod_assemblies_drop",
+          "manual_start_allowed": true,
+          "start_tool_regions": [],
+          "completion_regions": [
+            "box_tie_rod_assemblies"
+          ],
+          "completion_roles": [
+            "part_drop"
+          ],
+          "cooldown_frames": 8,
+          "hand_scope": "any",
+          "expected_parts": [
+            "tie_rod_assembly",
+            "front_cover",
+            "piston_rod"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "tie_rod_assembly"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "enforce_active_part_match": false,
+          "enforce_active_tool_match": false
+        },
+        {
+          "stage_name": "D04_remove_front_cover_drop",
+          "manual_start_allowed": true,
+          "start_tool_regions": [],
+          "completion_regions": [
+            "box_front_cover"
+          ],
+          "completion_roles": [
+            "part_drop"
+          ],
+          "cooldown_frames": 8,
+          "min_segment_points": 10,
+          "hand_scope": "any",
+          "expected_parts": [
+            "front_cover",
+            "cylinder_tube",
+            "piston_rod"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "front_cover"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "enforce_active_part_match": false,
+          "enforce_active_tool_match": false
+        },
+        {
+          "stage_name": "D05_remove_rear_cover_drop",
+          "manual_start_allowed": true,
+          "start_tool_regions": [],
+          "completion_regions": [
+            "box_rear_cover"
+          ],
+          "completion_roles": [
+            "part_drop"
+          ],
+          "cooldown_frames": 8,
+          "min_segment_points": 10,
+          "hand_scope": "any",
+          "expected_parts": [
+            "rear_cover",
+            "cylinder_tube",
+            "piston_rod",
+            "piston",
+            "screw",
+            "bttm_tie_rod_nut"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "rear_cover"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "enforce_active_part_match": false,
+          "enforce_active_tool_match": false
+        },
+        {
+          "stage_name": "D06_remove_bottom_tie_rod_nuts_drop",
+          "manual_start_allowed": true,
+          "start_tool_regions": [],
+          "completion_regions": [
+            "box_bottom_tie_rod_nuts"
+          ],
+          "completion_roles": [
+            "part_drop"
+          ],
+          "cooldown_frames": 8,
+          "hand_scope": "any",
+          "min_segment_points": 10,
+          "expected_parts": [
+            "bttm_tie_rod_nut",
+            "cylinder_tube",
+            "piston",
+            "screw"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "bttm_tie_rod_nut"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "enforce_active_part_match": false,
+          "enforce_active_tool_match": false
+        },
+        {
+          "stage_name": "D07_small_l_tool_unscrew_mounting_screw_drop",
+          "manual_start_allowed": false,
+          "start_tool_regions": [
+            "box_tools_pair"
+          ],
+          "completion_regions": [
+            "box_tools_pair"
+          ],
+          "completion_roles": [
+            "tool_drop"
+          ],
+          "cooldown_frames": 8,
+          "hand_scope": "any",
+          "min_stage_valid_time": 6.0,
+           "min_segment_points": 20,
+          "expected_parts": [
+            "cylinder_tube",
+            "piston_rod",
+            "piston",
+            "screw"
+          ],
+          "expected_tools": [
+            "screwdriver_small_l"
+          ],
+          "active_part_candidates": [
+            "piston"
+          ],
+          "active_tool_candidates": [
+            "screwdriver_small_l"
+          ],
+          "enforce_active_part_match": false,
+          "enforce_active_tool_match": true
+        },
+        {
+          "stage_name": "D08a_drop_mounting_screw",
+          "manual_start_allowed": true,
+          "start_tool_regions": [],
+          "completion_regions": [
+            "box_mounting_screw"
+          ],
+          "completion_roles": [
+            "part_drop"
+          ],
+          "unordered_group_id": "D09_piston_and_screw",
+          "unordered_group_members": [
+            "D08a_drop_mounting_screw",
+            "D08b_drop_piston"
+          ],
+          "min_segment_points": 10,
+          "score_threshold": 0.45,
+          "cooldown_frames": 1,
+          "hand_scope": "any",
+          "expected_parts": [
+            "screw",
+            "cylinder_tube",
+            "piston_rod",
+            "piston"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "screw"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "enforce_active_part_match": false,
+          "enforce_active_tool_match": false
+        },
+        {
+          "stage_name": "D08b_drop_piston",
+          "manual_start_allowed": true,
+          "start_tool_regions": [],
+          "completion_regions": [
+            "box_piston"
+          ],
+          "completion_roles": [
+            "part_drop"
+          ],
+          "unordered_group_id": "D09_piston_and_screw",
+          "unordered_group_members": [
+            "D08a_drop_mounting_screw",
+            "D08b_drop_piston"
+          ],
+          "min_segment_points": 10,
+          "score_threshold": 0.45,
+          "cooldown_frames": 1,
+          "hand_scope": "any",
+          "expected_parts": [
+            "piston",
+            "cylinder_tube",
+            "piston_rod"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "piston"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "enforce_active_part_match": false,
+          "enforce_active_tool_match": false
+        },
+        {
+          "stage_name": "D09_remove_cylinder_tube_drop",
+          "manual_start_allowed": true,
+          "start_tool_regions": [],
+          "completion_regions": [
+            "box_cylinder_tube"
+          ],
+          "completion_roles": [
+            "part_drop"
+          ],
+          "min_segment_points": 10,
+          "cooldown_frames": 2,
+          "hand_scope": "any",
+          "expected_parts": [
+            "cylinder_tube",
+            "piston_rod"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "cylinder_tube"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "enforce_active_part_match": false,
+          "enforce_active_tool_match": false
+        },
+        {
+          "stage_name": "D10_remove_piston_rod_drop",
+          "manual_start_allowed": true,
+          "start_tool_regions": [],
+          "completion_regions": [
+            "box_piston_rod"
+          ],
+          "completion_roles": [
+            "part_drop"
+          ],
+          "min_segment_points": 10,
+          "cooldown_frames": 8,
+          "hand_scope": "any",
+          "expected_parts": [
+            "piston_rod"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "piston_rod"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "enforce_active_part_match": false,
+          "enforce_active_tool_match": false
+        }
+      ]
+    },
+    "assembly": {
+      "stages": [
+        {
+          "stage_name": "A01_place_bottom_tie_rod_nuts",
+          "manual_start_allowed": false,
+          "start_roles": [
+            "part_pick"
+          ],
+          "start_source_regions": [
+            "box_bottom_tie_rod_nuts"
+          ],
+          "completion_mode": "next_stage_pick",
+          "next_stage_trigger_roles": [
+            "part_pick"
+          ],
+          "next_stage_source_regions": [
+            "box_rear_cover"
+          ],
+          "cooldown_frames": 1,
+          "min_stage_valid_time": 6.0,
+          "start_recent_hit_window": 12,
+          "start_recent_hit_count": 3,
+          "hand_scope": "any",
+          "expected_parts": [
+            "bttm_tie_rod_nut"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "bttm_tie_rod_nut"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "enforce_active_tool_match": false,
+          "enforce_active_part_match": false
+        },
+        {
+          "stage_name": "A02_place_rear_cover",
+          "manual_start_allowed": false,
+          "start_roles": [
+            "part_pick"
+          ],
+          "start_source_regions": [
+            "box_rear_cover"
+          ],
+          "completion_mode": "next_stage_pick",
+          "next_stage_trigger_roles": [
+            "part_pick"
+          ],
+          "next_stage_source_regions": [
+            "box_cylinder_tube"
+          ],
+          "min_segment_points": 12,
+          "score_threshold": 0.4,
+          "cooldown_frames": 1,
+          "start_recent_hit_window": 12,
+          "start_recent_hit_count": 3,
+          "hand_scope": "any",
+          "expected_parts": [
+            "rear_cover",
+            "bttm_tie_rod_nut"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "rear_cover"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "expected_poses": [
+            {
+              "part_label": "rear_cover",
+              "expected_pose": "correct_pose",
+              "temporal_window": "late",
+              "min_confidence": 0.5,
+              "min_match_ratio": 0.5
+            }
+          ],
+          "enforce_active_tool_match": false,
+          "enforce_active_part_match": false
+        },
+        {
+          "stage_name": "A03_place_cylinder_tube",
+          "manual_start_allowed": false,
+          "start_roles": [
+            "part_pick"
+          ],
+          "start_source_regions": [
+            "box_cylinder_tube"
+          ],
+          "completion_mode": "next_stage_pick",
+          "next_stage_trigger_roles": [
+            "part_pick"
+          ],
+          "next_stage_source_regions": [
+            "box_piston_rod"
+          ],
+          "min_segment_points": 12,
+          "score_threshold": 0.4,
+          "cooldown_frames": 1,
+          "hand_scope": "any",
+          "expected_parts": [
+            "rear_cover",
+            "cylinder_tube"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "cylinder_tube"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "expected_poses": [
+            {
+              "part_label": "rear_cover",
+              "expected_pose": "correct_pose",
+              "temporal_window": "early",
+              "min_confidence": 0.5,
+              "min_match_ratio": 0.5
+            }
+          ],
+          "enforce_active_tool_match": false,
+          "enforce_active_part_match": false
+        },
+        {
+          "stage_name": "A04_place_piston_rod_in_rod_holder",
+          "manual_start_allowed": false,
+          "start_roles": [
+            "part_pick"
+          ],
+          "start_source_regions": [
+            "box_piston_rod"
+          ],
+          "completion_mode": "next_stage_pick",
+          "next_stage_trigger_roles": [
+            "part_pick"
+          ],
+          "next_stage_source_regions": [
+            "box_piston"
+          ],
+          "min_segment_points": 12,
+          "score_threshold": 0.4,
+          "cooldown_frames": 1,
+          "hand_scope": "any",
+          "expected_parts": [
+            "cylinder_tube",
+            "piston_rod"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "piston_rod"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "expected_poses": [
+            {
+              "part_label": "piston_rod",
+              "expected_pose": "correct_pose",
+              "temporal_window": "late",
+              "min_confidence": 0.5,
+              "min_match_ratio": 0.5
+            }
+          ],
+          "enforce_active_tool_match": false,
+          "enforce_active_part_match": false
+        },
+        {
+          "stage_name": "A05_place_piston_on_rod",
+          "manual_start_allowed": false,
+          "start_roles": [
+            "part_pick"
+          ],
+          "start_source_regions": [
+            "box_piston"
+          ],
+          "completion_mode": "next_stage_pick",
+          "next_stage_trigger_roles": [
+            "part_pick"
+          ],
+          "next_stage_source_regions": [
+            "box_mounting_screw"
+          ],
+          "min_segment_points": 12,
+          "score_threshold": 0.4,
+          "cooldown_frames": 1,
+          "hand_scope": "any",
+          "expected_parts": [
+            "cylinder_tube",
+            "piston_rod",
+            "piston"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "piston"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "expected_poses": [
+            {
+              "part_label": "piston_rod",
+              "expected_pose": "correct_pose",
+              "temporal_window": "early",
+              "min_confidence": 0.5,
+              "min_match_ratio": 0.5
+            }
+          ],
+          "enforce_active_tool_match": false,
+          "enforce_active_part_match": false
+        },
+        {
+          "stage_name": "A06_place_mounting_screw_on_piston",
+          "manual_start_allowed": false,
+          "start_roles": [
+            "part_pick"
+          ],
+          "start_source_regions": [
+            "box_mounting_screw"
+          ],
+          "completion_mode": "next_stage_pick",
+          "next_stage_trigger_roles": [
+            "tool_pick"
+          ],
+          "next_stage_source_regions": [
+            "box_tools_pair"
+          ],
+          "min_segment_points": 12,
+          "score_threshold": 0.4,
+          "cooldown_frames": 1,
+          "hand_scope": "any",
+          "expected_parts": [
+            "piston",
+            "screw"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "screw"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "enforce_active_tool_match": false,
+          "enforce_active_part_match": false
+        },
+        {
+          "stage_name": "A07_small_l_tool_tighten_and_insert_subassembly",
+          "manual_start_allowed": false,
+          "start_roles": [
+            "tool_pick"
+          ],
+          "start_source_regions": [
+            "box_tools_pair"
+          ],
+          "completion_mode": "next_stage_pick",
+          "next_stage_trigger_roles": [
+            "part_pick"
+          ],
+          "next_stage_source_regions": [
+            "box_front_cover"
+          ],
+          "cooldown_frames": 1,
+          "hand_scope": "any",
+          "expected_parts": [
+            "piston",
+            "screw"
+          ],
+          "expected_tools": [
+            "screwdriver_small_l"
+          ],
+          "active_part_candidates": [
+            "piston"
+          ],
+          "active_tool_candidates": [
+            "screwdriver_small_l"
+          ],
+          "expected_poses": [
+            {
+              "part_label": "piston_rod",
+              "expected_pose": "flipped_pose",
+              "temporal_window": "late",
+              "min_confidence": 0.5,
+              "min_match_ratio": 0.5
+            }
+          ],
+          "enforce_expected_pose_match": false,
+          "enforce_active_tool_match": true,
+          "enforce_active_part_match": false
+        },
+        {
+          "stage_name": "A08_place_front_cover",
+          "manual_start_allowed": false,
+          "start_roles": [
+            "part_pick"
+          ],
+          "start_source_regions": [
+            "box_front_cover"
+          ],
+          "completion_mode": "next_stage_pick",
+          "next_stage_trigger_roles": [
+            "part_pick"
+          ],
+          "next_stage_source_regions": [
+            "box_tie_rod_assemblies"
+          ],
+          "min_segment_points": 12,
+          "score_threshold": 0.4,
+          "cooldown_frames": 1,
+          "hand_scope": "any",
+          "expected_parts": [
+            "front_cover"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "front_cover"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "expected_poses": [
+            {
+              "part_label": "front_cover",
+              "expected_pose": "correct_pose",
+              "temporal_window": "all",
+              "min_confidence": 0.5,
+              "min_match_ratio": 0.5
+            }
+          ],
+          "enforce_active_tool_match": false,
+          "enforce_active_part_match": false
+        },
+        {
+          "stage_name": "A09_place_long_tie_rod_assemblies",
+          "manual_start_allowed": false,
+          "start_roles": [
+            "part_pick"
+          ],
+          "start_source_regions": [
+            "box_tie_rod_assemblies"
+          ],
+          "completion_mode": "next_stage_pick",
+          "next_stage_trigger_roles": [
+            "tool_pick"
+          ],
+          "next_stage_source_regions": [
+            "box_tools_pair"
+          ],
+          "cooldown_frames": 1,
+          "hand_scope": "any",
+          "expected_parts": [
+            "front_cover",
+            "tie_rod_assembly"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "tie_rod_assembly"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "expected_poses": [
+            {
+              "part_label": "front_cover",
+              "expected_pose": "correct_pose",
+              "temporal_window": "all",
+              "min_confidence": 0.5,
+              "min_match_ratio": 0.5
+            }
+          ],
+          "enforce_active_tool_match": false,
+          "enforce_active_part_match": false
+        },
+        {
+          "stage_name": "A10_large_l_tool_tighten_tie_rods",
+          "manual_start_allowed": false,
+          "start_roles": [
+            "tool_pick"
+          ],
+          "start_source_regions": [
+            "box_tools_pair"
+          ],
+          "completion_mode": "next_stage_pick",
+          "next_stage_trigger_roles": [
+            "part_pick"
+          ],
+          "next_stage_source_regions": [
+            "box_piston_rod_nut"
+          ],
+          "cooldown_frames": 1,
+          "hand_scope": "any",
+          "expected_parts": [
+            "front_cover",
+            "tie_rod_assembly"
+          ],
+          "expected_tools": [
+            "screwdriver_large_l"
+          ],
+          "active_part_candidates": [
+            "NONE"
+          ],
+          "active_tool_candidates": [
+            "screwdriver_large_l"
+          ],
+          "expected_poses": [
+            {
+              "part_label": "front_cover",
+              "expected_pose": "correct_pose",
+              "temporal_window": "all",
+              "min_confidence": 0.5,
+              "min_match_ratio": 0.5
+            }
+          ],
+          "enforce_active_tool_match": true,
+          "enforce_active_part_match": false
+        },
+        {
+          "stage_name": "A11_tighten_top_bolt",
+          "manual_start_allowed": false,
+          "start_roles": [
+            "part_pick"
+          ],
+          "start_source_regions": [
+            "box_piston_rod_nut"
+          ],
+          "completion_mode": "terminal_end",
+          "completion_regions": [
+            "assembly_target"
+          ],
+          "completion_roles": [
+            "assembly_target"
+          ],
+          "completion_support_regions": [
+            "square_holder_zone",
+            "rod_holder_zone"
+          ],
+          "cooldown_frames": 1,
+          "hand_scope": "any",
+          "expected_parts": [
+            "front_cover",
+            "tie_rod_assembly",
+            "nut"
+          ],
+          "expected_tools": [
+            "NONE"
+          ],
+          "active_part_candidates": [
+            "nut"
+          ],
+          "active_tool_candidates": [
+            "NONE"
+          ],
+          "expected_poses": [
+            {
+              "part_label": "front_cover",
+              "expected_pose": "correct_pose",
+              "temporal_window": "all",
+              "min_confidence": 0.5,
+              "min_match_ratio": 0.5
+            }
+          ],
+          "enforce_active_tool_match": false,
+          "enforce_active_part_match": false
+        }
+      ]
+    }
+  }
+}

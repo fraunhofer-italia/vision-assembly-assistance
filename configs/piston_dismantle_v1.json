@@ -1,0 +1,178 @@
+{
+  "global": {
+    "mode": "offline",
+    "motion_fsm_version": "v2",
+    "stage_descriptors_config": "configs/stage_descriptors_v1.json",
+    "regions_config": "configs/regions_v2.json",
+    "use_region_detector": false,
+    "anchor_mode": "wrist_index_midpoint",
+    "dominant_hand": "RIGHT",
+    "active_hand_policy": "best_match",
+    "calibration": "src/assembly_assistant/calibration/calibration_data/calibration_example",
+    "no_hand_frames_to_split": 200,
+    "rearm_no_hand_frames": 1,
+    "min_segment_points": 20,
+    "motion_trigger_enabled": true,
+    "motion_ignore_frames": 40,
+    "motion_baseline_frames": 40,
+    "motion_diff_threshold": 12,
+    "motion_score_threshold": 0.01,
+    "motion_dwell_frames": 4,
+    "motion_history_frames": 6,
+    "motion_blur_kernel": [
+      5,
+      5
+    ],
+    "motion_log_interval_frames": 10,
+    "motion_global_suppress_threshold": 0.02,
+    "motion_global_relative_factor": 1.0,
+    "user_id": "1",
+    "operator_id": "1",
+    "session_id": "SESS_PISTON_D_V1"
+  },
+  "cases": [
+    {
+      "name": "dismantle_full_good_01",
+      "trial_id": "TRIAL_D_001",
+      "operation_mode": "dismantle",
+      "stage_names": [
+        "D01_remove_piston_rod_nut_drop",
+        "D02_large_l_tool_unscrew_and_drop",
+        "D03_remove_tie_rod_assemblies_drop",
+        "D04_remove_front_cover_drop",
+        "D05_remove_rear_cover_drop",
+        "D06_remove_bottom_tie_rod_nuts_drop",
+        "D07_small_l_tool_unscrew_mounting_screw_drop",
+        "D08a_drop_mounting_screw",
+        "D08b_drop_piston",
+        "D09_remove_cylinder_tube_drop",
+        "D10_remove_piston_rod_drop"
+      ],
+      "reference_videos_by_stage": {
+        "D01_remove_piston_rod_nut_drop": [
+          "data/references/vids/ref_StageD01_01_rgb.mp4",
+          "data/references/vids/ref_StageD01_02_rgb.mp4"
+        ],
+        "D02_large_l_tool_unscrew_and_drop": [
+          "data/references/vids/ref_StageD02_01_rgb.mp4",
+          "data/references/vids/ref_StageD02_02_rgb.mp4"
+        ],
+        "D03_remove_tie_rod_assemblies_drop": [
+          "data/references/vids/ref_StageD03_01_rgb.mp4",
+          "data/references/vids/ref_StageD03_02_rgb.mp4"
+        ],
+        "D04_remove_front_cover_drop": [
+          "data/references/vids/ref_StageD04_01_rgb.mp4",
+          "data/references/vids/ref_StageD04_02_rgb.mp4"
+        ],
+        "D05_remove_rear_cover_drop": [
+          "data/references/vids/ref_StageD05_01_rgb.mp4",
+          "data/references/vids/ref_StageD05_02_rgb.mp4"
+        ],
+        "D06_remove_bottom_tie_rod_nuts_drop": [
+          "data/references/vids/ref_StageD06_01_rgb.mp4",
+          "data/references/vids/ref_StageD06_02_rgb.mp4"
+        ],
+        "D07_small_l_tool_unscrew_mounting_screw_drop": [
+          "data/references/vids/ref_StageD07_01_rgb.mp4",
+          "data/references/vids/ref_StageD07_02_rgb.mp4"
+        ],
+        "D08a_drop_mounting_screw": [
+          "data/references/vids/ref_StageD08a_01_rgb.mp4",
+          "data/references/vids/ref_StageD08a_02_rgb.mp4"
+        ],
+        "D08b_drop_piston": [
+          "data/references/vids/ref_StageD08b_01_rgb.mp4",
+          "data/references/vids/ref_StageD08b_02_rgb.mp4"
+        ],
+        "D09_remove_cylinder_tube_drop": [
+          "data/references/vids/ref_StageD09_01_rgb.mp4",
+          "data/references/vids/ref_StageD09_02_rgb.mp4"
+        ],
+        "D10_remove_piston_rod_drop": [
+          "data/references/vids/ref_StageD10_01_rgb.mp4",
+          "data/references/vids/ref_StageD10_02_rgb.mp4"
+        ]
+      },
+      "expected_tools_by_stage": {
+        "D01_remove_piston_rod_nut_drop": "NONE",
+        "D02_large_l_tool_unscrew_and_drop": "NONE",
+        "D03_remove_tie_rod_assemblies_drop": "NONE",
+        "D04_remove_front_cover_drop": "NONE",
+        "D05_remove_rear_cover_drop": "NONE",
+        "D06_remove_bottom_tie_rod_nuts_drop": "NONE",
+        "D07_small_l_tool_unscrew_mounting_screw_drop": "NONE",
+        "D08a_drop_mounting_screw": "NONE",
+        "D08b_drop_piston": "NONE",
+        "D09_remove_cylinder_tube_drop": "NONE",
+        "D10_remove_piston_rod_drop": "NONE"
+      },
+      "stage_types_by_stage": {
+        "D01_remove_piston_rod_nut_drop": "ordered",
+        "D02_large_l_tool_unscrew_and_drop": "ordered",
+        "D03_remove_tie_rod_assemblies_drop": "ordered",
+        "D04_remove_front_cover_drop": "ordered",
+        "D05_remove_rear_cover_drop": "ordered",
+        "D06_remove_bottom_tie_rod_nuts_drop": "ordered",
+        "D07_small_l_tool_unscrew_mounting_screw_drop": "ordered",
+        "D08a_drop_mounting_screw": "ordered",
+        "D08b_drop_piston": "ordered",
+        "D09_remove_cylinder_tube_drop": "ordered",
+        "D10_remove_piston_rod_drop": "ordered"
+      },
+      "required_counts_by_stage": {
+        "D01_remove_piston_rod_nut_drop": 1,
+        "D02_large_l_tool_unscrew_and_drop": 1,
+        "D03_remove_tie_rod_assemblies_drop": 1,
+        "D04_remove_front_cover_drop": 1,
+        "D05_remove_rear_cover_drop": 1,
+        "D06_remove_bottom_tie_rod_nuts_drop": 1,
+        "D07_small_l_tool_unscrew_mounting_screw_drop": 1,
+        "D08a_drop_mounting_screw": 1,
+        "D08b_drop_piston": 1,
+        "D09_remove_cylinder_tube_drop": 1,
+        "D10_remove_piston_rod_drop": 1
+      },
+      "lockout_enabled_by_stage": {
+        "D01_remove_piston_rod_nut_drop": true,
+        "D02_large_l_tool_unscrew_and_drop": true,
+        "D03_remove_tie_rod_assemblies_drop": true,
+        "D04_remove_front_cover_drop": true,
+        "D05_remove_rear_cover_drop": true,
+        "D06_remove_bottom_tie_rod_nuts_drop": true,
+        "D07_small_l_tool_unscrew_mounting_screw_drop": true,
+        "D08a_drop_mounting_screw": true,
+        "D08b_drop_piston": true,
+        "D09_remove_cylinder_tube_drop": true,
+        "D10_remove_piston_rod_drop": true
+      },
+      "margin_mins_by_stage": {
+        "D01_remove_piston_rod_nut_drop": 0.0,
+        "D02_large_l_tool_unscrew_and_drop": 0.0,
+        "D03_remove_tie_rod_assemblies_drop": 0.0,
+        "D04_remove_front_cover_drop": 0.0,
+        "D05_remove_rear_cover_drop": 0.0,
+        "D06_remove_bottom_tie_rod_nuts_drop": 0.0,
+        "D07_small_l_tool_unscrew_mounting_screw_drop": 0.0,
+        "D08a_drop_mounting_screw": 0.0,
+        "D08b_drop_piston": 0.0,
+        "D09_remove_cylinder_tube_drop": 0.0,
+        "D10_remove_piston_rod_drop": 0.0
+      },
+      "stage_thresholds_by_stage": {
+        "D01_remove_piston_rod_nut_drop": 0.6,
+        "D02_large_l_tool_unscrew_and_drop": 0.6,
+        "D03_remove_tie_rod_assemblies_drop": 0.6,
+        "D04_remove_front_cover_drop": 0.6,
+        "D05_remove_rear_cover_drop": 0.6,
+        "D06_remove_bottom_tie_rod_nuts_drop": 0.6,
+        "D07_small_l_tool_unscrew_mounting_screw_drop": 0.6,
+        "D08a_drop_mounting_screw": 0.6,
+        "D08b_drop_piston": 0.6,
+        "D09_remove_cylinder_tube_drop": 0.6,
+        "D10_remove_piston_rod_drop": 0.6
+      },
+      "observed_full_video": "data/observed/vids/obs_dismantel_02_rgb.mp4"
+    }
+  ]
+}

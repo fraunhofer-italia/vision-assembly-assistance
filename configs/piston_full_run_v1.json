@@ -1,0 +1,285 @@
+{
+  "global": {
+    "mode": "offline",
+    "motion_fsm_version": "v2",
+    "stage_descriptors_config": "configs/stage_descriptors_v1.json",
+    "regions_config": "configs/regions_v2.json",
+    "use_region_detector": false,
+    "anchor_mode": "wrist_index_midpoint",
+    "dominant_hand": "RIGHT",
+    "active_hand_policy": "best_match",
+    "calibration": "src/assembly_assistant/calibration/calibration_data/calibration_example",
+    "no_hand_frames_to_split": 200,
+    "rearm_no_hand_frames": 1,
+    "min_segment_points": 50,
+    "user_id": "1",
+    "operator_id": "1",
+    "session_id": "SESS_PISTON_V1"
+  },
+  "cases": [
+    {
+      "name": "dismantle_full_good_01",
+      "trial_id": "TRIAL_D_001",
+      "operation_mode": "dismantle",
+      "stage_names": [
+        "D01_remove_piston_rod_nut_drop",
+        "D02_large_l_tool_unscrew_and_drop",
+        "D03_remove_tie_rod_assemblies_drop",
+        "D04_remove_front_cover_drop",
+        "D05_remove_rear_cover_drop",
+        "D06_remove_bottom_tie_rod_nuts_drop",
+        "D07_small_l_tool_unscrew_mounting_screw_drop",
+        "D08a_drop_mounting_screw",
+        "D08b_drop_piston",
+        "D09_remove_cylinder_tube_drop",
+        "D10_remove_piston_rod_drop"
+      ],
+      "reference_videos_by_stage": {
+        "D01_remove_piston_rod_nut_drop": [
+          "data/references/vids/ref_D02_01.mp4"
+        ],
+        "D02_large_l_tool_unscrew_and_drop": [
+          "data/references/vids/ref_D03_01.mp4"
+        ],
+        "D03_remove_tie_rod_assemblies_drop": [
+          "data/references/vids/ref_D04_01.mp4"
+        ],
+        "D04_remove_front_cover_drop": [
+          "data/references/vids/ref_D05_01.mp4"
+        ],
+        "D05_remove_rear_cover_drop": [
+          "data/references/vids/ref_D06_01.mp4"
+        ],
+        "D06_remove_bottom_tie_rod_nuts_drop": [
+          "data/references/vids/ref_D07_01.mp4"
+        ],
+        "D07_small_l_tool_unscrew_mounting_screw_drop": [
+          "data/references/vids/ref_D08_01.mp4"
+        ],
+        "D08a_drop_mounting_screw": [
+          "data/references/vids/ref_D09_01.mp4"
+        ],
+        "D08b_drop_piston": [
+          "data/references/vids/ref_D09_01.mp4"
+        ],
+        "D09_remove_cylinder_tube_drop": [
+          "data/references/vids/ref_D10_01.mp4"
+        ],
+        "D10_remove_piston_rod_drop": [
+          "data/references/vids/ref_D11_01.mp4"
+        ]
+      },
+      "expected_tools_by_stage": {
+        "D01_remove_piston_rod_nut_drop": "NONE",
+        "D02_large_l_tool_unscrew_and_drop": "NONE",
+        "D03_remove_tie_rod_assemblies_drop": "NONE",
+        "D04_remove_front_cover_drop": "NONE",
+        "D05_remove_rear_cover_drop": "NONE",
+        "D06_remove_bottom_tie_rod_nuts_drop": "NONE",
+        "D07_small_l_tool_unscrew_mounting_screw_drop": "NONE",
+        "D08a_drop_mounting_screw": "NONE",
+        "D08b_drop_piston": "NONE",
+        "D09_remove_cylinder_tube_drop": "NONE",
+        "D10_remove_piston_rod_drop": "NONE"
+      },
+      "stage_types_by_stage": {
+        "D01_remove_piston_rod_nut_drop": "ordered",
+        "D02_large_l_tool_unscrew_and_drop": "ordered",
+        "D03_remove_tie_rod_assemblies_drop": "ordered",
+        "D04_remove_front_cover_drop": "ordered",
+        "D05_remove_rear_cover_drop": "ordered",
+        "D06_remove_bottom_tie_rod_nuts_drop": "ordered",
+        "D07_small_l_tool_unscrew_mounting_screw_drop": "ordered",
+        "D08a_drop_mounting_screw": "ordered",
+        "D08b_drop_piston": "ordered",
+        "D09_remove_cylinder_tube_drop": "ordered",
+        "D10_remove_piston_rod_drop": "ordered"
+      },
+      "required_counts_by_stage": {
+        "D01_remove_piston_rod_nut_drop": 1,
+        "D02_large_l_tool_unscrew_and_drop": 1,
+        "D03_remove_tie_rod_assemblies_drop": 1,
+        "D04_remove_front_cover_drop": 1,
+        "D05_remove_rear_cover_drop": 1,
+        "D06_remove_bottom_tie_rod_nuts_drop": 1,
+        "D07_small_l_tool_unscrew_mounting_screw_drop": 1,
+        "D08a_drop_mounting_screw": 1,
+        "D08b_drop_piston": 1,
+        "D09_remove_cylinder_tube_drop": 1,
+        "D10_remove_piston_rod_drop": 1
+      },
+      "lockout_enabled_by_stage": {
+        "D01_remove_piston_rod_nut_drop": true,
+        "D02_large_l_tool_unscrew_and_drop": true,
+        "D03_remove_tie_rod_assemblies_drop": true,
+        "D04_remove_front_cover_drop": true,
+        "D05_remove_rear_cover_drop": true,
+        "D06_remove_bottom_tie_rod_nuts_drop": true,
+        "D07_small_l_tool_unscrew_mounting_screw_drop": true,
+        "D08a_drop_mounting_screw": true,
+        "D08b_drop_piston": true,
+        "D09_remove_cylinder_tube_drop": true,
+        "D10_remove_piston_rod_drop": true
+      },
+      "margin_mins_by_stage": {
+        "D01_remove_piston_rod_nut_drop": 0.0,
+        "D02_large_l_tool_unscrew_and_drop": 0.0,
+        "D03_remove_tie_rod_assemblies_drop": 0.0,
+        "D04_remove_front_cover_drop": 0.0,
+        "D05_remove_rear_cover_drop": 0.0,
+        "D06_remove_bottom_tie_rod_nuts_drop": 0.0,
+        "D07_small_l_tool_unscrew_mounting_screw_drop": 0.0,
+        "D08a_drop_mounting_screw": 0.0,
+        "D08b_drop_piston": 0.0,
+        "D09_remove_cylinder_tube_drop": 0.0,
+        "D10_remove_piston_rod_drop": 0.0
+      },
+      "stage_thresholds_by_stage": {
+        "D01_remove_piston_rod_nut_drop": 0.9,
+        "D02_large_l_tool_unscrew_and_drop": 0.9,
+        "D03_remove_tie_rod_assemblies_drop": 0.9,
+        "D04_remove_front_cover_drop": 0.9,
+        "D05_remove_rear_cover_drop": 0.9,
+        "D06_remove_bottom_tie_rod_nuts_drop": 0.9,
+        "D07_small_l_tool_unscrew_mounting_screw_drop": 0.9,
+        "D08a_drop_mounting_screw": 0.9,
+        "D08b_drop_piston": 0.9,
+        "D09_remove_cylinder_tube_drop": 0.9,
+        "D10_remove_piston_rod_drop": 0.9
+      },
+      "observed_full_video": "data/observed/vids/obs_full_piston_dismantle_good_01.mp4"
+    },
+    {
+      "name": "assembly_full_good_01",
+      "trial_id": "TRIAL_A_001",
+      "operation_mode": "assembly",
+      "stage_names": [
+        "A01_place_bottom_tie_rod_nuts",
+        "A02_place_rear_cover",
+        "A03_place_cylinder_tube",
+        "A04_place_piston_rod_in_rod_holder",
+        "A05_place_piston_on_rod",
+        "A06_place_mounting_screw_on_piston",
+        "A07_small_l_tool_tighten_and_insert_subassembly",
+        "A08_place_front_cover",
+        "A09_place_long_tie_rod_assemblies",
+        "A10_large_l_tool_tighten_tie_rods",
+        "A11_tighten_top_bolt"
+      ],
+      "reference_videos_by_stage": {
+        "A01_place_bottom_tie_rod_nuts": [
+          "data/references/vids/ref_A01_01.mp4"
+        ],
+        "A02_place_rear_cover": [
+          "data/references/vids/ref_A02_01.mp4"
+        ],
+        "A03_place_cylinder_tube": [
+          "data/references/vids/ref_A03_01.mp4"
+        ],
+        "A04_place_piston_rod_in_rod_holder": [
+          "data/references/vids/ref_A04_01.mp4"
+        ],
+        "A05_place_piston_on_rod": [
+          "data/references/vids/ref_A05_01.mp4"
+        ],
+        "A06_place_mounting_screw_on_piston": [
+          "data/references/vids/ref_A06_01.mp4"
+        ],
+        "A07_small_l_tool_tighten_and_insert_subassembly": [
+          "data/references/vids/ref_A07_01.mp4"
+        ],
+        "A08_place_front_cover": [
+          "data/references/vids/ref_A08_01.mp4"
+        ],
+        "A09_place_long_tie_rod_assemblies": [
+          "data/references/vids/ref_A09_01.mp4"
+        ],
+        "A10_large_l_tool_tighten_tie_rods": [
+          "data/references/vids/ref_A10_01.mp4"
+        ],
+        "A11_tighten_top_bolt": [
+          "data/references/vids/ref_A11_01.mp4"
+        ]
+      },
+      "expected_tools_by_stage": {
+        "A01_place_bottom_tie_rod_nuts": "NONE",
+        "A02_place_rear_cover": "NONE",
+        "A03_place_cylinder_tube": "NONE",
+        "A04_place_piston_rod_in_rod_holder": "NONE",
+        "A05_place_piston_on_rod": "NONE",
+        "A06_place_mounting_screw_on_piston": "NONE",
+        "A07_small_l_tool_tighten_and_insert_subassembly": "NONE",
+        "A08_place_front_cover": "NONE",
+        "A09_place_long_tie_rod_assemblies": "NONE",
+        "A10_large_l_tool_tighten_tie_rods": "NONE",
+        "A11_tighten_top_bolt": "NONE"
+      },
+      "stage_types_by_stage": {
+        "A01_place_bottom_tie_rod_nuts": "ordered",
+        "A02_place_rear_cover": "ordered",
+        "A03_place_cylinder_tube": "ordered",
+        "A04_place_piston_rod_in_rod_holder": "ordered",
+        "A05_place_piston_on_rod": "ordered",
+        "A06_place_mounting_screw_on_piston": "ordered",
+        "A07_small_l_tool_tighten_and_insert_subassembly": "ordered",
+        "A08_place_front_cover": "ordered",
+        "A09_place_long_tie_rod_assemblies": "ordered",
+        "A10_large_l_tool_tighten_tie_rods": "ordered",
+        "A11_tighten_top_bolt": "ordered"
+      },
+      "required_counts_by_stage": {
+        "A01_place_bottom_tie_rod_nuts": 1,
+        "A02_place_rear_cover": 1,
+        "A03_place_cylinder_tube": 1,
+        "A04_place_piston_rod_in_rod_holder": 1,
+        "A05_place_piston_on_rod": 1,
+        "A06_place_mounting_screw_on_piston": 1,
+        "A07_small_l_tool_tighten_and_insert_subassembly": 1,
+        "A08_place_front_cover": 1,
+        "A09_place_long_tie_rod_assemblies": 1,
+        "A10_large_l_tool_tighten_tie_rods": 1,
+        "A11_tighten_top_bolt": 1
+      },
+      "lockout_enabled_by_stage": {
+        "A01_place_bottom_tie_rod_nuts": true,
+        "A02_place_rear_cover": true,
+        "A03_place_cylinder_tube": true,
+        "A04_place_piston_rod_in_rod_holder": true,
+        "A05_place_piston_on_rod": true,
+        "A06_place_mounting_screw_on_piston": true,
+        "A07_small_l_tool_tighten_and_insert_subassembly": true,
+        "A08_place_front_cover": true,
+        "A09_place_long_tie_rod_assemblies": true,
+        "A10_large_l_tool_tighten_tie_rods": true,
+        "A11_tighten_top_bolt": true
+      },
+      "margin_mins_by_stage": {
+        "A01_place_bottom_tie_rod_nuts": 0.0,
+        "A02_place_rear_cover": 0.0,
+        "A03_place_cylinder_tube": 0.0,
+        "A04_place_piston_rod_in_rod_holder": 0.0,
+        "A05_place_piston_on_rod": 0.0,
+        "A06_place_mounting_screw_on_piston": 0.0,
+        "A07_small_l_tool_tighten_and_insert_subassembly": 0.0,
+        "A08_place_front_cover": 0.0,
+        "A09_place_long_tie_rod_assemblies": 0.0,
+        "A10_large_l_tool_tighten_tie_rods": 0.0,
+        "A11_tighten_top_bolt": 0.0
+      },
+      "stage_thresholds_by_stage": {
+        "A01_place_bottom_tie_rod_nuts": 0.9,
+        "A02_place_rear_cover": 0.9,
+        "A03_place_cylinder_tube": 0.9,
+        "A04_place_piston_rod_in_rod_holder": 0.9,
+        "A05_place_piston_on_rod": 0.9,
+        "A06_place_mounting_screw_on_piston": 0.9,
+        "A07_small_l_tool_tighten_and_insert_subassembly": 0.9,
+        "A08_place_front_cover": 0.9,
+        "A09_place_long_tie_rod_assemblies": 0.9,
+        "A10_large_l_tool_tighten_tie_rods": 0.9,
+        "A11_tighten_top_bolt": 0.9
+      },
+      "observed_full_video": "data/observed/vids/obs_full_piston_assembly_good_01.mp4"
+    }
+  ]
+}

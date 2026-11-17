@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "enabled": true,
+  "description": "Stage-aware virtual placement guides for assembly/dismantle video overlays.",
+  "default_alpha": 0.3,
+  "default_color_bgr": [
+    70,
+    255,
+    90
+  ],
+  "notes": [
+    "target_region values refer to configs/regions_v2.json region_id entries.",
+    "square_base and rod_base are projection-only workspace_norm regions and can be retuned with scripts/annotate_region_polygons.py.",
+    "Shapes are intentionally simple 2D guides: region_fill, outline, corner_circles, center_circle, capsule, four_rods."
+  ],
+  "stages": {
+    "A01_place_bottom_tie_rod_nuts": {
+      "items": [
+        {
+          "part_label": "bttm_tie_rod_nut",
+          "target_region": "square_base",
+          "shape": "corner_circles",
+          "label": "bottom nuts",
+          "radius_px": 10,
+          "alpha": 0.38
+        }
+      ]
+    },
+    "A02_place_rear_cover": {
+      "items": [
+        {
+          "part_label": "rear_cover",
+          "target_region": "square_base",
+          "shape": "region_fill",
+          "label": "rear cover",
+          "alpha": 0.24
+        }
+      ]
+    },
+    "A03_place_cylinder_tube": {
+      "items": [
+        {
+          "part_label": "cylinder_tube",
+          "target_region": "square_base",
+          "shape": "four_rods",
+          "label": "cylinder tube",
+          "alpha": 0.38,
+          "length_ratio": 0.78,
+          "thickness_ratio": 0.32
+        }
+      ]
+    },
+    "A04_place_piston_rod_in_rod_holder": {
+      "items": [
+        {
+          "part_label": "piston_rod",
+          "target_region": "rod_base",
+          "shape": "center_circle",
+          "label": "piston rod",
+          "alpha": 0.4,
+          "length_ratio": 0.9,
+          "thickness_ratio": 0.18
+        }
+      ]
+    },
+    "A05_place_piston_on_rod": {
+      "items": [
+        {
+          "part_label": "piston",
+          "target_region": "rod_base",
+          "shape": "center_circle",
+          "label": "piston",
+          "alpha": 0.4
+        }
+      ]
+    },
+    "A06_place_mounting_screw_on_piston": {
+      "items": [
+        {
+          "part_label": "screw",
+          "target_region": "rod_base",
+          "shape": "center_circle",
+          "label": "mounting screw",
+          "radius_px": 12,
+          "alpha": 0.42
+        }
+      ]
+    },
+    "A07_small_l_tool_tighten_and_insert_subassembly": {
+      "items": [
+        {
+          "part_label": "piston_rod_subassembly",
+          "target_region": "rod_base",
+          "shape": "capsule",
+          "label": "insert subassembly",
+          "alpha": 0.34,
+          "length_ratio": 0.9,
+          "thickness_ratio": 0.24
+        }
+      ]
+    },
+    "A08_place_front_cover": {
+      "items": [
+        {
+          "part_label": "front_cover",
+          "target_region": "square_base",
+          "shape": "region_fill",
+          "label": "front cover",
+          "alpha": 0.24
+        }
+      ]
+    },
+    "A09_place_long_tie_rod_assemblies": {
+      "items": [
+        {
+          "part_label": "tie_rod_assembly",
+          "target_region": "square_base",
+          "shape": "corner_circles",
+          "label": "tie rods",
+          "alpha": 0.46,
+          "thickness": 7
+        }
+      ]
+    },
+    "A10_large_l_tool_tighten_tie_rods": {
+      "items": [
+        {
+          "part_label": "tie_rod_assembly",
+          "target_region": "square_base",
+          "shape": "corner_circles",
+          "label": "tighten tie rods",
+          "alpha": 0.42,
+          "thickness": 7
+        }
+      ]
+    },
+    "A11_tighten_top_bolt": {
+      "items": [
+        {
+          "part_label": "nut",
+          "target_region": "square_base",
+          "shape": "center_circle",
+          "label": "top nuts",
+          "radius_px": 10,
+          "alpha": 0.38
+        }
+      ]
+    }
+  }
+}

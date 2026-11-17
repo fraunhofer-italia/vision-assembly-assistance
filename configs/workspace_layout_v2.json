@@ -1,0 +1,342 @@
+{
+  "layout_id": "workspace_layout_v2",
+  "version": "2.0",
+  "description": "Permanent pneumatic piston workstation layout (top-view camera), aligned to regions_v2.",
+  "camera": {
+    "mount_type": "fixed_overhead",
+    "notes": "Do not move camera after calibration. Re-calibrate only if camera/workspace shifts.",
+    "pose_hint": {
+      "height_mm": 700,
+      "tilt_deg": 0,
+      "roll_deg": 0,
+      "yaw_deg": 0
+    }
+  },
+  "calibration": {
+    "workspace_corners_norm": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "homography_source": "src/assembly_assistant/calibration/calibration_data/<calibration_id>/homography.npy"
+  },
+  "workspace": {
+    "work_region": [
+      0.05,
+      0.05,
+      0.95,
+      0.95
+    ],
+    "holder_setup_mm": {
+      "overall_size": [
+        150,
+        70
+      ],
+      "square_holder_to_rod_holder_center_distance": 50
+    },
+    "zones": {
+      "square_holder_zone": [
+        [
+          0.7183135830454938,
+          0.601747954331213
+        ],
+        [
+          0.5091946209009199,
+          0.6195599771043708
+        ],
+        [
+          0.4979310105991751,
+          0.1749005105378248
+        ],
+        [
+          0.7166661289690546,
+          0.18437550047998325
+        ]
+      ],
+      "rod_holder_zone": [
+        [
+          0.4758509012390356,
+          0.6132412408243868
+        ],
+        [
+          0.282342174075324,
+          0.6228684037674639
+        ],
+        [
+          0.2601367822286566,
+          0.20260769207084844
+        ],
+        [
+          0.46723855921191004,
+          0.1850852936338017
+        ]
+      ],
+      "dead_band_zone": [
+        [
+          0.465,
+          0.173
+        ],
+        [
+          0.495,
+          0.173
+        ],
+        [
+          0.495,
+          0.6
+        ],
+        [
+          0.465,
+          0.6
+        ]
+      ],
+      "assembly_target": [
+        [
+          0.7090028982934993,
+          0.6099688609023355
+        ],
+        [
+          0.27969465219029294,
+          0.6352625834921016
+        ],
+        [
+          0.24807399992171544,
+          0.19010882440023313
+        ],
+        [
+          0.7099939584749321,
+          0.17192747639236278
+        ]
+      ]
+    },
+    "notes": "Dead-band zone is a safety strip between holder zones to avoid false triggers."
+  },
+  "part_boxes_image_px": [
+    {
+      "region_id": "box_tools_pair",
+      "polygon_px": [
+        [
+          67,
+          90
+        ],
+        [
+          219,
+          86
+        ],
+        [
+          218,
+          302
+        ],
+        [
+          73,
+          303
+        ]
+      ]
+    },
+    {
+      "region_id": "box_piston_rod_nut",
+      "polygon_px": [
+        [
+          1016,
+          87
+        ],
+        [
+          1151,
+          77
+        ],
+        [
+          1160,
+          285
+        ],
+        [
+          1022,
+          292
+        ]
+      ]
+    },
+    {
+      "region_id": "box_mounting_screw",
+      "polygon_px": [
+        [
+          432,
+          576
+        ],
+        [
+          586,
+          573
+        ],
+        [
+          594,
+          715
+        ],
+        [
+          418,
+          715
+        ]
+      ]
+    },
+    {
+      "region_id": "box_piston",
+      "polygon_px": [
+        [
+          244,
+          579
+        ],
+        [
+          401,
+          570
+        ],
+        [
+          402,
+          714
+        ],
+        [
+          228,
+          713
+        ]
+      ]
+    },
+    {
+      "region_id": "box_bottom_tie_rod_nuts",
+      "polygon_px": [
+        [
+          1105,
+          557
+        ],
+        [
+          1253,
+          557
+        ],
+        [
+          1277,
+          713
+        ],
+        [
+          1121,
+          714
+        ]
+      ]
+    },
+    {
+      "region_id": "box_rear_cover",
+      "polygon_px": [
+        [
+          921,
+          568
+        ],
+        [
+          1074,
+          563
+        ],
+        [
+          1105,
+          711
+        ],
+        [
+          930,
+          713
+        ]
+      ]
+    },
+    {
+      "region_id": "box_front_cover",
+      "polygon_px": [
+        [
+          64,
+          313
+        ],
+        [
+          216,
+          318
+        ],
+        [
+          211,
+          529
+        ],
+        [
+          67,
+          527
+        ]
+      ]
+    },
+    {
+      "region_id": "box_tie_rod_assemblies",
+      "polygon_px": [
+        [
+          1015,
+          307
+        ],
+        [
+          1154,
+          299
+        ],
+        [
+          1160,
+          504
+        ],
+        [
+          1017,
+          502
+        ]
+      ]
+    },
+    {
+      "region_id": "box_cylinder_tube",
+      "polygon_px": [
+        [
+          618,
+          565
+        ],
+        [
+          762,
+          564
+        ],
+        [
+          790,
+          712
+        ],
+        [
+          610,
+          711
+        ]
+      ]
+    },
+    {
+      "region_id": "box_piston_rod",
+      "polygon_px": [
+        [
+          42,
+          581
+        ],
+        [
+          216,
+          578
+        ],
+        [
+          211,
+          715
+        ],
+        [
+          38,
+          715
+        ]
+      ]
+    }
+  ],
+  "reference_photos": {
+    "top_view": "docs/workspace_reference/top_view_v1.jpg",
+    "side_view": "docs/workspace_reference/side_view_v1.jpg"
+  }
+}

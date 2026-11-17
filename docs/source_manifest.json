@@ -1,0 +1,786 @@
+{
+  "source_commit": "33879a9c8b40377aab797ce15758d4b39e4df2ac",
+  "selection": "Explicit paper entrypoints, their local import closure, related tests and configs; no data, weights or history.",
+  "files": [
+    {
+      "path": "configs/experiment_configuration.py",
+      "source_sha256": "760b6717bc57ce1ef5d2f20b7641532a11034c0e312072760f8974659295487a",
+      "candidate_sha256": "5ebbdae23464dca50f384dd00dde9609f4e29a5fcee61941166bc94ae18b9a5c",
+      "content_changed": false
+    },
+    {
+      "path": "configs/piston_assembly_v1.json",
+      "source_sha256": "2568b9fcadd85cabde77a6d3b1fc2399bb4fa89204ff0bffe19fa1b7475942ba",
+      "candidate_sha256": "b249c67a79989720f9fa869ffc3c51c7d79a6a2733fadd43bb4cd7a0786cff68",
+      "content_changed": true
+    },
+    {
+      "path": "configs/piston_dismantle_v1.json",
+      "source_sha256": "6a86b7767fd4d8e068292c729b5b2510176870cb81a0e89171940e06e8635935",
+      "candidate_sha256": "f3f65f0e69c17d72f9bc74bfb57263ac1cdd7f452ba674bde8bc5209ddf54c1b",
+      "content_changed": true
+    },
+    {
+      "path": "configs/piston_full_run_v1.json",
+      "source_sha256": "dafa11929c92bc1edc7d370c0a84167098cbc48e799267b3d472b8d02051a572",
+      "candidate_sha256": "04964840844d78b7b50650e7899821420cd400c8a9a77636a197ea041e7ca2ef",
+      "content_changed": true
+    },
+    {
+      "path": "configs/regions_v2.json",
+      "source_sha256": "423a32d69e8b740381d2ba442f7da9619be7ab07a61c0097324246c7ff0e234c",
+      "candidate_sha256": "94e1b3449218f81b1d2960586e878b87e4d2ce29d0b45998c0ec79febddcc105",
+      "content_changed": false
+    },
+    {
+      "path": "configs/stage_descriptors_v1.json",
+      "source_sha256": "e86c1651098f5db59d42edcc110621de8555632c0148b4a7859758830a94d2f2",
+      "candidate_sha256": "2b45c19d72df8fa839f97bb9d107c372944ac14f3f7e9b29d0567ac29a2f84b0",
+      "content_changed": false
+    },
+    {
+      "path": "configs/virtual_projections_v1.json",
+      "source_sha256": "2020ca5656fd5f3bb5075a5c640a7385845182c066f64399a917496c1d7bb7d6",
+      "candidate_sha256": "6fbb7c149cc36533f6543b8347c416b31c8f78a21ebc178af55659c65e0fe29b",
+      "content_changed": false
+    },
+    {
+      "path": "configs/virtual_projections_v2.json",
+      "source_sha256": "818d95d5005bfe1b34b1126b8e9b19cca27be1e5ff661b8a21e7230f9721fbe5",
+      "candidate_sha256": "ac754e25b18aec6e55568ba5b386014d6f44d94cc7615ec1ef90f7105f3fbe6a",
+      "content_changed": false
+    },
+    {
+      "path": "configs/workspace_layout_v2.json",
+      "source_sha256": "2f2d56cceb6d6cc879926f3b56a85b51f50d52e0fc390635f9492b83e726d285",
+      "candidate_sha256": "8fc915b01f6906014cdb5700f029bd0bad4c1becba467dd101680ff59d4d5480",
+      "content_changed": false
+    },
+    {
+      "path": "data/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "data/mocks/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "data/mocks/synthetic_trajectories.py",
+      "source_sha256": "3e2e8f06b086416944c2c9a9d34c768b589c8b7f51a91a6318339d19e7800677",
+      "candidate_sha256": "31950c8c455840f5ea9b7bab227dbb3897c49501da04c834213e6e2cf44313f7",
+      "content_changed": false
+    },
+    {
+      "path": "data/mocks/trajectory_generator.py",
+      "source_sha256": "fe3cb7f833b19cd49c4432f2d29f5b0fdad4ebe1e1022d735df0172433b2bb7c",
+      "candidate_sha256": "76801d1e8b8176d8813b995d20914a1560543f547714ead9592c8cac01ac53f0",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/annotate_region_polygons.py",
+      "source_sha256": "b4889cb312fd9435de3db1a3f5d80cbb9895fc67b78d8c01985f24c02cd656fe",
+      "candidate_sha256": "52252dd9d9c3255e8f2d0335f726df89da3d4a10bc053cca14c12d635b1017d4",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/build_pose_classifier_dataset.py",
+      "source_sha256": "a1d64afa69ba732714a37ead39d6ba812ff3f00db4a44615f42a36b7807abb47",
+      "candidate_sha256": "1c2bb9c01cb895ac7a9f244e673a8dabe4a0b622d4ad8867e0637be857b4fc03",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/check_stage_trigger.py",
+      "source_sha256": "2020baa847475b9fe7167b997c1e8910c3a2e6873e13372503714aee2e5f51cf",
+      "candidate_sha256": "3e567e2d4226949607c16021f8380f683017077274af9ace2aa36dbe53900f2e",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/check_yolo_dataset_pairs.py",
+      "source_sha256": "3ee6a55121e9f99dedf6e08f33a0df198fa7754486b968dddcd9c3344c5b8ed6",
+      "candidate_sha256": "8d506c9d2513b23685e7f68bfb74c4e46458605970ec97242289b667e6d0931d",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/convert_coco_to_yolo_detection.py",
+      "source_sha256": "999b19d9f1745b959773199251ba32fb1b7d61910835994265d918972aa9d506",
+      "candidate_sha256": "a5d3f4003bbd3f8d09ade21e1ff0e5e5e02b3dc7023bd2eb238e1ec99963e9bc",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/experiment_runner.py",
+      "source_sha256": "6d8d73f0dac2fe475583c78fbaa352b6b0fec5ea856451c4c7f1cdc1a09ac9f0",
+      "candidate_sha256": "e5d4be2d2581d6697c62c0cd0b8afa803de8e4ab065ab09af9d859301efca3ce",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/extract_detector_frames.py",
+      "source_sha256": "3c1aefab57e546ed088956fd60a2e83a8efc49ffd092945353bca6bb4e7447e6",
+      "candidate_sha256": "5aaa84c30445f24b25242063b1cd636093e1c05d93e9f2aec647494b4c9cedf3",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/extract_pose_classifier_rois.py",
+      "source_sha256": "12d190c14068685ffc34da580703fcbc06fda3fff50303778f568a458d3ba104",
+      "candidate_sha256": "71ed380d8d81e4d9d0676fbf64305c56ffb10c4dccc8672e9596402f1e4d42a1",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/guidance_stats_final_analysis_model_B.py",
+      "source_sha256": "e33930e9ece3d40dc413dc3fadd478306434053e140709447fa7818c69e2cca3",
+      "candidate_sha256": "abdc63066973501b7927b1f3da1946f1a3af29e81c6136ae239b63c2db56842b",
+      "content_changed": true
+    },
+    {
+      "path": "scripts/main.py",
+      "source_sha256": "0084222bf4b5fa462fa2298ad8dfe81f7060b044543b18a8335a2e76cde2ed51",
+      "candidate_sha256": "0d0b915e06f842eb7b364bed81aeaa1c98228f9d2d784b8180bf4af2623299b3",
+      "content_changed": true
+    },
+    {
+      "path": "scripts/main_full_pipeline.py",
+      "source_sha256": "f88b5a50ce41ba7f145961420ccbb2c3603e313e59b418fba63da3265cf24436",
+      "candidate_sha256": "976499b84ef73a620068421e3d3a4b8a326214211a68d253232e37bd95cd67d5",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/main_guidance_ui.py",
+      "source_sha256": "ce14055ea3493894a3178445738e8209523d4db53b0f5cd68ed2acb4b9c014b9",
+      "candidate_sha256": "48e4a82ead2dcb60904a05a4341ffdabc50b73fead1a9b2f79e48cf0aba0a09e",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/run_calibrate.py",
+      "source_sha256": "ed7dad2840991c1acde9a190ba0777bf6bea2b37f34b359070206960829aa9f2",
+      "candidate_sha256": "ffbca4204a26003e8c350b4462414c49394e56a2f3017c20e163872bf1316143",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/run_pose_classifier_video.py",
+      "source_sha256": "221564294ff7941a8658b8c21c17aa81b41f94fcc2640125a9d86385e519d711",
+      "candidate_sha256": "77d48c86372de1d93ff3be7b6383278e4ed444b04a60763f148a0d5208068469",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/run_remote_vision_inference_server.py",
+      "source_sha256": "90582146d02c7578758fb0ba1d753e91743e9bbfedfc6b79918c3a18aefe8d3b",
+      "candidate_sha256": "d2f3b62b03437d62b9ab66f3f154a1b6d573372ce26698ee45c21e78325500da",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/show_region_overlays.py",
+      "source_sha256": "5402d23aac14558ec12ea768dbd2d393e5779994179871633f97fe6daa79453e",
+      "candidate_sha256": "6d8d67207916c00abdd5a2dd80d97159d51bd85273cddfdca548b8ef0e8556f5",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/train_rfdetr_detector.py",
+      "source_sha256": "490e622e6c0a84c05588c10b5f91646df6cd0108e5d0bfd0cb5be7bf348cc6ad",
+      "candidate_sha256": "99b199cda576d268c4e84485e0d38acf6655b995e4da0139845cb3c2faa8093d",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/train_yolo_pose_classifier.py",
+      "source_sha256": "5605527bcab8dfd01c291ecb861974233f3db2cf5efd8123181b3f4d42a928f4",
+      "candidate_sha256": "0084266e97235d6668fd16cfe62bb93df935af319234ccfb99460b639f5530b6",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/training_utils.py",
+      "source_sha256": "95c2121c84112905bfb480fd68f36b8500c06c5e7002f9eea5c8dc4ae27c149e",
+      "candidate_sha256": "61d03b7522d51c8243c389e5807691c70e88cce4523b59c0597c9cfb5c75b438",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/tune_virtual_projection.py",
+      "source_sha256": "a7d73516cde7910fbdf59118168636b1a34b44d50771bbe9f723a329afa729bf",
+      "candidate_sha256": "5afa6e074d78b9d48afa66d561701755417c9740b7e7463c182e880c6bcc5a51",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/validate_metadata.py",
+      "source_sha256": "6f57d6002e156dd1aff0b86a676c887488c0c467f015f06c50153a83007fc08e",
+      "candidate_sha256": "d9a53497286c5745c81f3d97e2355591c58997e20816a74538c873c978cad29b",
+      "content_changed": false
+    },
+    {
+      "path": "scripts/visualize_yolo_labels.py",
+      "source_sha256": "d5be598918d067623d700c6511667c36fb0222b6f6a3d4e3ad6e33a673900f24",
+      "candidate_sha256": "1b97ab8bbeba7019463bfe3a8326ad13cb08268a57a7679423f04e4638c984fc",
+      "content_changed": false
+    },
+    {
+      "path": "src/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/analysis/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/analysis/error_taxonomy.py",
+      "source_sha256": "b230ecd187e7cbf42ce09eec30f2b57fb97f35b23da3ad30af8daabc16f1041e",
+      "candidate_sha256": "442716d3a8bca049336c2c9886f3db5613e79c7b6285853b930ea3b6547b7b83",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/analysis/fatigue_metrics.py",
+      "source_sha256": "c915f0575b1decaf32c6fe07f48e60e228b571f91be5927c7b3c28fb23c2e84f",
+      "candidate_sha256": "b54a7ea5e2c36da938948aaad34023c2f43c23a1e220f6d3a539eb2e6da0b4aa",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/calibration/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/calibration/calibration_loader.py",
+      "source_sha256": "71ac8d2c20ca153f539eb343618096c3c695b13f19fefbcdb106ec380672e845",
+      "candidate_sha256": "e616a8391d4af4816b690a43d2eb5a7a671c37fec08fe88aa6738d339b505684",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/calibration/workspace_calibrator.py",
+      "source_sha256": "63c8efb5366d581af4553fbcc2aad3627107903af8e03da341b6387c387bf2f5",
+      "candidate_sha256": "fe18ea0ce78d2594e380f83066916e5420b1a16c5a81cada68e414339ac9dd96",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/detection_types/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/detection_types/detector_outputs.py",
+      "source_sha256": "eb4ec13a576c1c92867ca30499584d439a0bca26290b7dbacd1ed12d47570c08",
+      "candidate_sha256": "b285866cf4cc847e53db0c9cb820b7de1cdf0ab85dad5f90ab441af400f0426b",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/detection_types/label_taxonomy.py",
+      "source_sha256": "d7cd0ccf2b53e4b17db7d44c29f4291bf08a4068dbaae31dd12cea1b8454d495",
+      "candidate_sha256": "f8eaaaf0a3c5b197d24f8b2ebdeeb66d1fa11e9dcdd1c99ee5dab764278c35f4",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/detectors/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/detectors/detection_bridge.py",
+      "source_sha256": "4226e508a25ef81faff0785c197fb9b0341b7febbd8f5620a54ed77799f03924",
+      "candidate_sha256": "bbc59e45616e6ef7f3a94498dfea83d3e251b50cb69022e28d3f350cf982c5c2",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/detectors/rfdetr_object_detector.py",
+      "source_sha256": "b25e8e30e4283caa66e96098d7605f3095307f90389fb31b0c92958eb6cb6677",
+      "candidate_sha256": "67e7f4ea27894347434906fe5fdddc1041f7e6d83543f78b3b5173a020cdb1c3",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/fsm/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/fsm/motion_fsm.py",
+      "source_sha256": "7e7f1592dea96fa8684622155ecf6faaa46683d12797dc76f7424bc6c66b37f2",
+      "candidate_sha256": "d3e91484067eb9c242b367d113328cbd46785dbbc02bb8e0d5e934864e9036a2",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/fsm/motion_fsm_v2.py",
+      "source_sha256": "eb3da7e3eeb38ee071c8e427e60870c63033991b8e45d3084623df4599c5e386",
+      "candidate_sha256": "1681ebabeface62e15a8e30e6572dc4388a7502c2c58dfa0d0c4fd36f3e5c364",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/fsm/recovery_manager.py",
+      "source_sha256": "93e1c07a6f6001ddc716905e7d5c284924cf37e9d2d501ddde4b3440cbcab939",
+      "candidate_sha256": "e99a758ca34c2727944d9abbeb8b655621777db38fb9d366d080ea58de8bbc1b",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/fsm/reference_manager.py",
+      "source_sha256": "707e88d65f10ddad375563e7640e0307999f1aa3d670b9c7321b55412dae6494",
+      "candidate_sha256": "ae6ead0ee6893b805d0446b1909896c60f511bf6aac7d30543dbb2871f070d72",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/fsm/stage_config.py",
+      "source_sha256": "cfc29d0d6c6b95837ba71331d914f9b3cb402921ac68e4ccd4450c3196ca6210",
+      "candidate_sha256": "6032ed4ca265b1ca6133ada2fb755c91c9857e376c18f66feb286b9d5cd2c722",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/fsm/stage_fsm.py",
+      "source_sha256": "524f7b71e46789bd2ff3441678898cbb2e53690ce13a1193c0f54cee9c1e4577",
+      "candidate_sha256": "674738241e92c5345deef5ef57b3512fb200af26d0aacbc22b4fb891a31419e2",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/__init__.py",
+      "source_sha256": "6a22f3c03f2273fa2c792bf238ac3981a0201cfd5c5d7988c2d378e1a4b8e795",
+      "candidate_sha256": "b38835849ec87210330a11f6d252e41c33e111639224bb7b398558b64a166fb2",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/color_change_trigger.py",
+      "source_sha256": "118ac4aa61299cae6a48af9872ba6c79af9943830e869da80e831bfad67c1391",
+      "candidate_sha256": "343b3b85569a02c9cad826e3e55f837f31cad5479ff124cfc24b5d685e0f91e7",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/config_resolver.py",
+      "source_sha256": "d4098c97435555bd7b3c1741eae58664aa36e60cf97e1b213abc3ae132116038",
+      "candidate_sha256": "0cda476548029e23bd6a08e116b7ee1e29df05c02f17a9eddc6c13ebbbfcdd94",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/depth_trigger.py",
+      "source_sha256": "5d4637eb5e74ffb49b23105896f6f899d2b3f1e9f4b2140720c4bab716a82449",
+      "candidate_sha256": "8e8fd70df6b39b56d7fa0841a798d62446cbe65f31c525e3240f4a30794de415",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/event_extractor.py",
+      "source_sha256": "aed595a37643da89529ca869f9b41c019e10c7f0a88858abfb2ec00789b3e8af",
+      "candidate_sha256": "af88acd4f700cdcf79452e83b9c514b007dab7fbf74e8c9dd180506cef5b5961",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/experiment_io.py",
+      "source_sha256": "6ed1fc35d143daa7f624c99daa5ef2b9b5b3be553c30e443e72d205f394394a5",
+      "candidate_sha256": "8a85b68e84caf4b0b9972a67c76d3e9be97289b581276bba2c81c8b8e267b764",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/overlays.py",
+      "source_sha256": "ad81db61222397b961539773e11994496bbe45991d15c58107da2315828db292",
+      "candidate_sha256": "ed2c645c5c54452b469d1f1cd38e387d9a31c98ab51156b4651477c2b67f2112",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/protocol.py",
+      "source_sha256": "bd12c3c1ff46a51c05ee5a1f93024a12375d771132828a9f8afc4e94d2177fcd",
+      "candidate_sha256": "9245e5418552442ffd5d74405f58820f31685de26324e4f18a66e33eab8900b5",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/reference_build.py",
+      "source_sha256": "6092e990f362521d546ec5e2a20db7c14d66e729279ff176083b7b45ca1a7d3c",
+      "candidate_sha256": "47ddc28b9a3ce289595b6c12a50add21fed40514e0f0a6a37ad1bc68e9d72f4e",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/region_detector.py",
+      "source_sha256": "60d9a7debda41a6e2bfaafefc4c16e2425d125fa650c6b488b4a881f6d25cabf",
+      "candidate_sha256": "1d45168783dea4b29457605cf4a7355a56e24f719ea14b6e983e1202595feee3",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/region_registry.py",
+      "source_sha256": "faf4da5342b2d22e67b83e8dcaab426f2d32cac5130c8b2cea83b8b83a6b9554",
+      "candidate_sha256": "bc6cf3b2ab379e66dec23c2ab6164a99f2276c6c36974be238e1a2d752785e70",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/roi_motion_trigger.py",
+      "source_sha256": "d854c774f294968dc24145be250ae4bbaf8be1dd26772a11039db55e0fcb1b8a",
+      "candidate_sha256": "dbcf6ec39c588dc70029ffd854ef6de69519a01a7c307d3eb4ce4b46a5f60338",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/stage_descriptor_loader.py",
+      "source_sha256": "31312d79db62a6e935dd9c33243e5cf66c30c94ca7a0c9eaae243fe7b17610c8",
+      "candidate_sha256": "84123ebf70f0e74e444fb39c7b3a13b3e61ad1b2eb0d311bead3836813c7f732",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/stage_region_validator.py",
+      "source_sha256": "9bfb786d04a80c0f0b96d61a02b3a7b4a8a8a05502a1193df1ff1a20ec5dad71",
+      "candidate_sha256": "0a90c8d99af35d528421d637d7d077d4ae2949856da55d958daa7ba10d653645",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/video_extractors.py",
+      "source_sha256": "cf1ada12f314b89707f57dfa38d481964f8f8c00129fc988f910348ea1e6c5ca",
+      "candidate_sha256": "d0561af9d967c4217c1a83d97390aff95fa05a89343d84798e4955bc06879b39",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pipeline/virtual_projection.py",
+      "source_sha256": "7b7071ca9d95fc8fb6fca6668913043c6be995983e65864d01975f1d8991cf1c",
+      "candidate_sha256": "1ebb0818376e310e6954e8422d74c806fee33a020dd445a736b77634693aed18",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pose/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pose/bridge.py",
+      "source_sha256": "9cf37ff43cd684fd69eafd82dd57b6ee67cf696b3d8b73017e753df0c7b73f08",
+      "candidate_sha256": "57d1036d0894f55a359668f3986ef587b9a3bd23fafccef8ab9bda08ddf5aad2",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/pose/pose_classifier.py",
+      "source_sha256": "e4f346b0c7aa7f169934e06554c41115ab05e2f80ae9b9946f5c517aa384be0b",
+      "candidate_sha256": "467eb86cd8ab71849af353403fb225ec0fa145483420d06e45e76b13b507cb3f",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/remote/__init__.py",
+      "source_sha256": "c1ea1a2d96865b98ae79ede90a1afb98488e681900de9376101a21b16b5c6daf",
+      "candidate_sha256": "b0f40d10337a64ed1b0863331b655da90a1540aecb414ba2b2eb57744b7b9af6",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/remote/vision_inference.py",
+      "source_sha256": "a34cc5cb725fac6c705f5b5315e293ab246e4996f98150187dbbd4190d689180",
+      "candidate_sha256": "7a27550ea5c6fd915fb5d934c69ba1ac717d6b8292001fa0b5429b9bd7f478be",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/similarity/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/similarity/dtw_engine.py",
+      "source_sha256": "de2eb5c5de8c8919c32617ce0374d2c24dadcd25656d6969b61f6a77a219781c",
+      "candidate_sha256": "607a63914dc905a331e71ba60f3a59d36e86646db1dfaf868922bbc064ede773",
+      "content_changed": true
+    },
+    {
+      "path": "src/assembly_assistant/synchronization/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/synchronization/sync_manager.py",
+      "source_sha256": "1c7202c77cad6acae0ecc2989723b9c568d2379010feff34bbb1e9f29c75d53e",
+      "candidate_sha256": "39255e1854db6cf73c46c35342e252a0ab4c2ed058c0c6038f26ce11dbcc0ad9",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/trajectory/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/trajectory/active_hand_selector.py",
+      "source_sha256": "eb84e3714542308ed7a54f56036f3830f8822118e3e54f0c027fc1ee47b7e311",
+      "candidate_sha256": "1306d3cff8f9616c211c708fcc406bc41315b26d45829ee7fec5dabda940810d",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/trajectory/frame_processor.py",
+      "source_sha256": "e11ade16c8a78577a2acb001f1624f511f5acd25ef3d1645413a72906a7dbbf8",
+      "candidate_sha256": "fe8faa86867909d1db7469834dc7e4a7172762335520fcb51879515ec9a9dc5d",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/trajectory/preprocessing.py",
+      "source_sha256": "747ed1a6f485be1e6152b540bd0da59a3b0e2e63e0c6481a6fbe7dd7235bda57",
+      "candidate_sha256": "8120fd6110d2e57876ee0b98217ca5c342367f510f1a5ba0d733f4a3c9a338aa",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/trajectory/trajectory_builder.py",
+      "source_sha256": "bb0836034b30b7d5e3aee8d7d6ff5a8199e2679ca6b5a69a5f43bae1d785ca16",
+      "candidate_sha256": "05dd5b7107d5a3e2680f5ddb5253fbf34b478664d543037f9c886f9b9dc9a7ab",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/ui/__init__.py",
+      "source_sha256": "8d695c7413537a3441f9646d8c019e4f446051e2841896b8fec2f6a675b86f14",
+      "candidate_sha256": "ccb4c20ec37e71c9492350c124334294788165872dc72a1cc1105de15357bc9a",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/ui/user_messages.py",
+      "source_sha256": "1657a08df4bda10bfb25caa14ba5269ca2f52dd459506563ff628d8308a0d7ac",
+      "candidate_sha256": "726c77b35bd86434e8aca893cc99be3ec8bea0fa3648f85b4be71fcb64661d41",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/utils/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/utils/experiment_logger.py",
+      "source_sha256": "90fa56e7ae19ec4a5773755d22058c6a9047b5d4be1d5cc5b7e763b87ba380a4",
+      "candidate_sha256": "0548c420344ebc7742e6e9c36e05f1327ad44c1c590632d84bf68aec1aa1a6e8",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/utils/fatigue_logger.py",
+      "source_sha256": "baf7e6552132fb2a05fe9afe3400b5b564fcc7efeaefba6f32c6941dd78bf101",
+      "candidate_sha256": "cf61c7b271e3a63f35b9b79a81db186e2532278864755d3bb4511c0d27588757",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/utils/logger.py",
+      "source_sha256": "5e0eab376cbfba2b0526dda0dc53d06b2bae6e40182a6659832a1bed6a242011",
+      "candidate_sha256": "49c069b7aecef63dfe8b106364bbce1d8987ffe484ce94e042985a09e97ea46e",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/utils/metadata_manager.py",
+      "source_sha256": "95f62249d8b84b769907738df939fa78b5b602bff5f423d8275e6583ba7e9c91",
+      "candidate_sha256": "e68822721e62e957ae92adeb0e91274177a5bbb5d5ee28fcd80bc991b20fea93",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/utils/metadata_validator.py",
+      "source_sha256": "fb8e32660a527aa1fbeb404e9c73065c3536f19b746b845d383a35536cfd382b",
+      "candidate_sha256": "4bb0ab78baffb42d7a5130e2ac87bb59f9cc32723e479296eb4a9553eb9f5419",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/utils/paths.py",
+      "source_sha256": "2a0aaee6bd79fbef86a2a9ac2287f4e42f7148f747cbe2436257d3f8fe36220b",
+      "candidate_sha256": "e901a3c3efe03baa8e162f115bf9b31c7466921ed567e13050f6d015f9ecb046",
+      "content_changed": false
+    },
+    {
+      "path": "src/assembly_assistant/utils/stage_metrics_logger.py",
+      "source_sha256": "b9dfe4069a5615a7ed8f8f9e603fc8549869f0c1f5e099d3b118b10f4c30605a",
+      "candidate_sha256": "889525c655e0e60dc351378f65849d8883953077454544f07b25a43de3715f63",
+      "content_changed": false
+    },
+    {
+      "path": "tests/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "content_changed": false
+    },
+    {
+      "path": "tests/conftest.py",
+      "source_sha256": "7784a42e7d42c5a7607c596a218f983b009e9400f8d0421b51c2429c1b9a4e61",
+      "candidate_sha256": "b8bcd0ac1a34078d3c9b0c3608be9a1a0682cdc8bce1f0f09bc8301142f3464c",
+      "content_changed": true
+    },
+    {
+      "path": "tests/test_unit_active_hand_selector.py",
+      "source_sha256": "d26a9f6c54dba824a978c985b6bc3025497f6099082fb5404104c7e63cb33972",
+      "candidate_sha256": "04651fc0039c8b8d91dc595cb0a0a1859d866510268b1ea357e09ca8ab2cb8a4",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_detection_bridge.py",
+      "source_sha256": "09c7536e6276356274158e184ea4df4c4bbf1ba88e2a4c8bfc00c80d70969c28",
+      "candidate_sha256": "2ee0cff0440e71b662f09d0efd688f7d70a44333ace41e30c2c0a88f306793cc",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_dtw_engine.py",
+      "source_sha256": "76c90b437ed8fda46853d84ec8f60b8105dd97699e8e9ef223aee212e735e2d0",
+      "candidate_sha256": "ce343ea5cb481d4739789f7671b63775f2a92c9f6852f57f7b74c4882a702d29",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_error_taxonomy.py",
+      "source_sha256": "f3e84904abafcf1effdefaf343253f1f5e3cc8892a1d35ab667252bc5e27aad9",
+      "candidate_sha256": "1954d01015ba5755c8b1d568c81d86466b1fdc0eeb801be4bf0b5930a43996a2",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_event_extractor.py",
+      "source_sha256": "dcb2a7bf9e36772e27166b161b224bcfc854cf7018f238293029a29bfa36928b",
+      "candidate_sha256": "4a3c1f79234f84673b86cbbe4dcc345cb2eb8c8031acefbf0a55cb11b7af61c7",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_experiment_logger.py",
+      "source_sha256": "f35d3b5d8b5ba3447f653b8ff4738fe79f9d5777e4d755661eb3b8e3a5db47d4",
+      "candidate_sha256": "83abfd37db65fbc24b316d2b2d8ba4f1adfe3a6da988b4407f17b6405fac8c7e",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_fatigue_metrics.py",
+      "source_sha256": "ef6938f8c971d14e64129e50542eb150d4ba6c1b039d1c19c0cd7af91477f9fa",
+      "candidate_sha256": "54040003594b338c92725789cfdc62d7a4bc22f69a2d4eb44688eb2a5450e523",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_fsm_integration.py",
+      "source_sha256": "9e80eeb2af5c8636b85340aaa43b0060dee88884dc61a99e66e674e75e36cb3d",
+      "candidate_sha256": "4c45c5b90a387a9ca81a89514fcc03cd04e38bb09181be3ce1538bfc3a5dede0",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_handedness_fallback.py",
+      "source_sha256": "12d7d953df2a5a439710fe685eb6eca5e28b8f761adf6347b9de54786d200080",
+      "candidate_sha256": "32e7c8735b60f888b16a34000c24d990f0391fd42fc26f7fe2abe7407f01d491",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_main_full_pipeline.py",
+      "source_sha256": "f5de8da8044062b4b08edae3c18178d6144267129745de850c23a22fa156f50d",
+      "candidate_sha256": "ad45b4f4e119f1f1aa7f236f9238e19633491f53cd4820ff42f60ef43788cccf",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_metadata_manager.py",
+      "source_sha256": "77e15ceb8f0141a8160088db95ec084cd657354bcccd29e8c41613786497ada9",
+      "candidate_sha256": "38b21eadb501290e420c394e7d97b33f0b2046909ab6599d25f69db7e9344b66",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_metadata_validator.py",
+      "source_sha256": "1a62a50a496acad280f81cad62ef2a6470b4452372534ad28aa8282b005ba24d",
+      "candidate_sha256": "c037b3370d521ad3618eb3a8dd2ca18529f6fd01cf73465ea776f1152c6ba652",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_motion_fsm.py",
+      "source_sha256": "7a8ce4d3fc7e63507c28d1fe7ca024ba2c778a6b4ecfe086f632e475d2dff762",
+      "candidate_sha256": "5487dea8863117fe60745ddb44d4bd085574ff9d1fe04a6e24f2c860425ae970",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_motion_fsm_v2.py",
+      "source_sha256": "ae5f8100b38925e02580b67735e023f08825df45afa3c7cea60e5ef426f3a96a",
+      "candidate_sha256": "6edb92a372bbf49f212578286e2586549c2c29210ce30b57dfd0d64b124da505",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_region_detector.py",
+      "source_sha256": "e5f32836b91aaf2700fe3f7977431a0f86b81337e0c0fcfe4d925bc1b0c205cf",
+      "candidate_sha256": "6cae99386e9ef21ab26352f1adbdf95800919fdf7dbf79d8ff49acdce9eb5ac0",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_region_registry.py",
+      "source_sha256": "68bef0899ffdddc7f840e7373779a9f7d3686132018b0b0d4e15f8fd61a2cb1f",
+      "candidate_sha256": "4b3251349946e87dca3c6bb8f3d600e5e025bcde8f44622e394a040767291be1",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_resolve_tool.py",
+      "source_sha256": "9fd5f805f09c05735ded4db8ddc7e0bb41bda7d5847e5220ce19f8405ab67ab9",
+      "candidate_sha256": "4cd577566b3d21959f3d0b09fe49e3b6bad940d9a3e63756e3a4606365a8c5fd",
+      "content_changed": true
+    },
+    {
+      "path": "tests/test_unit_roi_motion_trigger.py",
+      "source_sha256": "b7bd87df508c42538bd2a20e704ee1f441ce598c270b307c53c3b59435a9191c",
+      "candidate_sha256": "fb1401b76331c1af3f88c92de0a89bf7bcd4b0b0a900620cf9d03936cde5aa17",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_stage_descriptor_loader.py",
+      "source_sha256": "c6dd7ae8159abe66a0cbbfe0386489121f30ed913616dae1bd8e08b9c712c213",
+      "candidate_sha256": "d79fa28d2bb2152ec6462b53f3c19a57ffffacf4addbeeea71c36a06f4daab7f",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_stage_fsm.py",
+      "source_sha256": "29553f4eb5545ade01f45f25e86f9786163ec5beca91ace6e032bfe78a995092",
+      "candidate_sha256": "ff266de661f9cb2bba1e10f1707c32e5e504b7a7df80f9a3cde727b3e620a1fe",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_stage_region_validator.py",
+      "source_sha256": "37cde4cc128817f04c21c43c610a512b387639520fd82ebeaca4683b6d4b3bd0",
+      "candidate_sha256": "ed694db6f01baaf108b951b81273204449f8f06f24174e046b4ab30f3193fe39",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_sync_manager.py",
+      "source_sha256": "62cbed898837f1d1d91be7d42362e689d0f04a8ee9955a00e7f08aa452eed4bd",
+      "candidate_sha256": "171b02fe0feec3ae826203a2944d08be424cf38c5ca454bc3537dec8ec7c8b82",
+      "content_changed": true
+    },
+    {
+      "path": "tests/test_unit_trajectory_builder.py",
+      "source_sha256": "ad75b9d8278b41b421894afaaf3947d003a548e725267eedb039b1054d000938",
+      "candidate_sha256": "4c65dd29b376cd5bfbdc869c5a50a3b29bfe8fe7f8b6670236777683261fd9f6",
+      "content_changed": true
+    },
+    {
+      "path": "tests/test_unit_trajectory_preprocessing.py",
+      "source_sha256": "31baf34a04a352c1d1a51870c01529b342d259c86acc9d3f33c7e2990c260a9a",
+      "candidate_sha256": "7474fcf5023821419ad53031292e4e6adf468836d6907053621451604ffc2b28",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_unordered_group_stage.py",
+      "source_sha256": "d4cfc3d24c1d7031f567f4778f84321583815ac4d55ffba6c505c7ff1960f662",
+      "candidate_sha256": "62caac460900ce7e0d6a8f47fc8b938c9a6325bb59ed969d882bd61638a5e069",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_video_extractors_regions.py",
+      "source_sha256": "f73797727dfbffb88eef86cae935df82986272042275a918a466dbf8f55ad6da",
+      "candidate_sha256": "d63bda9afc13100e35b5e1ba61545d9889de894299bf8a1f454cae41de03338d",
+      "content_changed": false
+    },
+    {
+      "path": "tests/test_unit_video_extractors_segmentation.py",
+      "source_sha256": "06588be9e036bb258b4972761f522f2360498ce1809a2936821619e8a5ece007",
+      "candidate_sha256": "0febc3f867eb96c068ef25655d887e0627b65b6e67b1d9db2c4a3837b2ddfa91",
+      "content_changed": true
+    },
+    {
+      "path": "tests/test_unit_virtual_projection.py",
+      "source_sha256": "fac3119e9444dcfc45414b94b4022c9c4e7bf4b1e8c9ca64e3dd174b05f42e3c",
+      "candidate_sha256": "d4fca3a07dbd7c1bfcf6bd280f6e585b0d9942161cb7c9b1db770687177eb473",
+      "content_changed": false
+    }
+  ],
+  "generated_files": [
+    ".gitignore",
+    "README.md",
+    "configs/__init__.py",
+    "docs/data_contract.md",
+    "docs/licensing.md",
+    "docs/release_status.md",
+    "docs/verification.md",
+    "pyproject.toml",
+    "requirements/checks.txt",
+    "requirements/verification.lock.txt",
+    "scripts/__init__.py",
+    "scripts/validate_release.py",
+    "tests/test_release_analysis_ids.py",
+    "tests/test_synthetic_demo.py"
+  ],
+  "verification": {
+    "date": "2026-11-17",
+    "python": "3.11.5",
+    "tests_passed": 134,
+    "cli_help_checks_passed": 19,
+    "full_study_analysis_rerun": false,
+    "camera_or_model_inference_run": false
+  }
+}

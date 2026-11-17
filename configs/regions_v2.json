@@ -1,0 +1,916 @@
+{
+  "registry_id": "regions_v2",
+  "version": "2.0",
+  "coordinate_frame": "mixed",
+  "modes": [
+    "assembly",
+    "dismantle"
+  ],
+  "notes": [
+    "Tool pair box is outside workspace and uses image_px polygons.",
+    "Part boxes are outside workspace and use image_px polygons.",
+    "Part boxes are mode-dependent: assembly uses part_pick, dismantle uses part_drop.",
+    "Box placement per user layout: 1(top-right),2(bottom-right), 8..3 along top edge left->right, 5(top-left),10(bottom-left)."
+  ],
+  "regions": [
+    {
+      "region_id": "box_tools_pair",
+      "coordinate_frame": "image_px",
+      "polygon_px": [
+        [
+          39,
+          92
+        ],
+        [
+          190,
+          80
+        ],
+        [
+          192,
+          303
+        ],
+        [
+          50,
+          308
+        ]
+      ],
+      "roles": [
+        "tool_pick",
+        "tool_drop"
+      ],
+      "mode_semantics": {
+        "assembly": {
+          "tool_pick": true,
+          "tool_drop": true
+        },
+        "dismantle": {
+          "tool_pick": true,
+          "tool_drop": true
+        }
+      },
+      "notes": "Box 2: bottom-right tool pair box. Used for tool pick/drop."
+    },
+    {
+      "region_id": "box_piston_rod_nut",
+      "coordinate_frame": "image_px",
+      "polygon_px": [
+        [
+          992,
+          85
+        ],
+        [
+          1132,
+          79
+        ],
+        [
+          1139,
+          288
+        ],
+        [
+          992,
+          294
+        ]
+      ],
+      "roles": [
+        "part_pick",
+        "part_drop",
+        "tool_pick",
+        "tool_drop"
+      ],
+      "mode_semantics": {
+        "assembly": {
+          "part_pick": true,
+          "part_drop": false,
+          "tool_pick": true,
+          "tool_drop": true
+        },
+        "dismantle": {
+          "part_pick": false,
+          "part_drop": true,
+          "tool_pick": true,
+          "tool_drop": true
+        }
+      },
+      "notes": "Box 1: top-right. Update polygon_px with annotate tool."
+    },
+    {
+      "region_id": "box_mounting_screw",
+      "coordinate_frame": "image_px",
+      "polygon_px": [
+        [
+          391,
+          567
+        ],
+        [
+          572,
+          561
+        ],
+        [
+          571,
+          717
+        ],
+        [
+          396,
+          713
+        ]
+      ],
+      "roles": [
+        "part_pick",
+        "part_drop"
+      ],
+      "mode_semantics": {
+        "assembly": {
+          "part_pick": true,
+          "part_drop": false
+        },
+        "dismantle": {
+          "part_pick": false,
+          "part_drop": true
+        }
+      },
+      "notes": "Box 8: top edge, leftmost."
+    },
+    {
+      "region_id": "box_piston",
+      "coordinate_frame": "image_px",
+      "polygon_px": [
+        [
+          218,
+          576
+        ],
+        [
+          370,
+          566
+        ],
+        [
+          379,
+          711
+        ],
+        [
+          207,
+          712
+        ]
+      ],
+      "roles": [
+        "part_pick",
+        "part_drop"
+      ],
+      "mode_semantics": {
+        "assembly": {
+          "part_pick": true,
+          "part_drop": false
+        },
+        "dismantle": {
+          "part_pick": false,
+          "part_drop": true
+        }
+      },
+      "notes": "Box 9: top edge, left->right after box 8."
+    },
+    {
+      "region_id": "box_bottom_tie_rod_nuts",
+      "coordinate_frame": "image_px",
+      "polygon_px": [
+        [
+          1084,
+          554
+        ],
+        [
+          1254,
+          548
+        ],
+        [
+          1273,
+          707
+        ],
+        [
+          1105,
+          713
+        ]
+      ],
+      "roles": [
+        "part_pick",
+        "part_drop"
+      ],
+      "mode_semantics": {
+        "assembly": {
+          "part_pick": true,
+          "part_drop": false
+        },
+        "dismantle": {
+          "part_pick": false,
+          "part_drop": true
+        }
+      },
+      "notes": "Box 7: top edge."
+    },
+    {
+      "region_id": "box_rear_cover",
+      "coordinate_frame": "image_px",
+      "polygon_px": [
+        [
+          890,
+          561
+        ],
+        [
+          1069,
+          554
+        ],
+        [
+          1088,
+          711
+        ],
+        [
+          901,
+          713
+        ]
+      ],
+      "roles": [
+        "part_pick",
+        "part_drop"
+      ],
+      "mode_semantics": {
+        "assembly": {
+          "part_pick": true,
+          "part_drop": false
+        },
+        "dismantle": {
+          "part_pick": false,
+          "part_drop": true
+        }
+      },
+      "notes": "Box 6: top edge."
+    },
+    {
+      "region_id": "box_front_cover",
+      "coordinate_frame": "image_px",
+      "polygon_px": [
+        [
+          44,
+          316
+        ],
+        [
+          199,
+          315
+        ],
+        [
+          199,
+          525
+        ],
+        [
+          51,
+          532
+        ]
+      ],
+      "roles": [
+        "part_pick",
+        "part_drop"
+      ],
+      "mode_semantics": {
+        "assembly": {
+          "part_pick": true,
+          "part_drop": false
+        },
+        "dismantle": {
+          "part_pick": false,
+          "part_drop": true
+        }
+      },
+      "notes": "Box 4: top edge."
+    },
+    {
+      "region_id": "box_tie_rod_assemblies",
+      "coordinate_frame": "image_px",
+      "polygon_px": [
+        [
+          981,
+          307
+        ],
+        [
+          1131,
+          302
+        ],
+        [
+          1136,
+          513
+        ],
+        [
+          987,
+          514
+        ]
+      ],
+      "roles": [
+        "part_pick",
+        "part_drop"
+      ],
+      "mode_semantics": {
+        "assembly": {
+          "part_pick": true,
+          "part_drop": false
+        },
+        "dismantle": {
+          "part_pick": false,
+          "part_drop": true
+        }
+      },
+      "notes": "Box 3: top edge rightmost."
+    },
+    {
+      "region_id": "box_cylinder_tube",
+      "coordinate_frame": "image_px",
+      "polygon_px": [
+        [
+          601,
+          568
+        ],
+        [
+          740,
+          561
+        ],
+        [
+          764,
+          715
+        ],
+        [
+          593,
+          717
+        ]
+      ],
+      "roles": [
+        "part_pick",
+        "part_drop"
+      ],
+      "mode_semantics": {
+        "assembly": {
+          "part_pick": true,
+          "part_drop": false
+        },
+        "dismantle": {
+          "part_pick": false,
+          "part_drop": true
+        }
+      },
+      "notes": "Box 5: top-left."
+    },
+    {
+      "region_id": "box_piston_rod",
+      "coordinate_frame": "image_px",
+      "polygon_px": [
+        [
+          42,
+          582
+        ],
+        [
+          188,
+          583
+        ],
+        [
+          186,
+          712
+        ],
+        [
+          10,
+          712
+        ]
+      ],
+      "roles": [
+        "part_pick",
+        "part_drop"
+      ],
+      "mode_semantics": {
+        "assembly": {
+          "part_pick": true,
+          "part_drop": false
+        },
+        "dismantle": {
+          "part_pick": false,
+          "part_drop": true
+        }
+      },
+      "notes": "Box 10: bottom-left."
+    },
+    {
+      "region_id": "assembly_target",
+      "coordinate_frame": "workspace_norm",
+      "polygon_norm": [
+        [
+          0.7216085172437321,
+          0.6174588660542365
+        ],
+        [
+          0.2869617567135462,
+          0.6364104254203427
+        ],
+        [
+          0.2772337115205334,
+          0.1789973787791694
+        ],
+        [
+          0.7176900087762732,
+          0.18066625569880623
+        ]
+      ],
+      "roles": [
+        "assembly_target",
+        "disassembly_target"
+      ],
+      "notes": "Broad working area, can be omitted if using holder zones only."
+    },
+    {
+      "region_id": "square_holder_zone",
+      "coordinate_frame": "workspace_norm",
+      "polygon_norm": [
+        [
+          0.7070076067121134,
+          0.6009314118082753
+        ],
+        [
+          0.5114331267379644,
+          0.6207510600336186
+        ],
+        [
+          0.5019728488525161,
+          0.19950100645043342
+        ],
+        [
+          0.7057281353617222,
+          0.20118778129714654
+        ]
+      ],
+      "roles": [
+        "assembly_target",
+        "disassembly_target"
+      ],
+      "notes": "Slightly shrunk to avoid overlap with rod_holder_zone. Tune after calibration."
+    },
+    {
+      "region_id": "rod_holder_zone",
+      "coordinate_frame": "workspace_norm",
+      "polygon_norm": [
+        [
+          0.4714260683085042,
+          0.6288484542829718
+        ],
+        [
+          0.46592667494134105,
+          0.19920260055130173
+        ],
+        [
+          0.281274905208569,
+          0.2038877736136626
+        ],
+        [
+          0.2883071916194099,
+          0.6446848512937438
+        ]
+      ],
+      "roles": [
+        "assembly_target",
+        "disassembly_target"
+      ],
+      "notes": "Slightly shrunk to avoid overlap with square_holder_zone. Tune after calibration."
+    },
+    {
+      "region_id": "dead_band_zone",
+      "coordinate_frame": "workspace_norm",
+      "polygon_norm": [
+        [
+          0.5074348113001792,
+          0.6248610353181502
+        ],
+        [
+          0.45808468572765715,
+          0.6349886694132967
+        ],
+        [
+          0.45389864823063075,
+          0.1825616250523182
+        ],
+        [
+          0.5046430957888304,
+          0.20365611605387607
+        ]
+      ],
+      "roles": [
+        "dead_band"
+      ],
+      "notes": "No-trigger safety strip between holder zones to prevent accidental transitions."
+    },
+    {
+      "region_id": "square_base",
+      "coordinate_frame": "workspace_norm",
+      "polygon_norm": [
+        [
+          0.5700264598926845,
+          0.4456885256082224
+        ],
+        [
+          0.510051568081408,
+          0.45153728604448035
+        ],
+        [
+          0.5086916755948562,
+          0.3606844914085839
+        ],
+        [
+          0.5713437025821267,
+          0.3528437547776163
+        ]
+      ],
+      "roles": [
+        "projection_target"
+      ],
+      "notes": "Projection-only square base guide. Retune with annotate_region_polygons.py without changing FSM trigger regions."
+    },
+    {
+      "region_id": "rod_base",
+      "coordinate_frame": "workspace_norm",
+      "polygon_norm": [
+        [
+          0.45265826553694244,
+          0.41816197621056006
+        ],
+        [
+          0.4232737035202482,
+          0.42005162518883177
+        ],
+        [
+          0.42058287495633234,
+          0.3807703534443174
+        ],
+        [
+          0.4553130913594865,
+          0.3789265502262936
+        ]
+      ],
+      "roles": [
+        "projection_target"
+      ],
+      "notes": "Projection-only rod base guide. Retune with annotate_region_polygons.py without changing FSM trigger regions."
+    }
+  ],
+  "stage_bindings": {
+    "D01_remove_piston_rod_nut_drop": {
+      "assembly": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [
+          "square_holder_zone"
+        ],
+        "valid_target_regions": [
+          "box_piston_rod_nut"
+        ],
+        "valid_tool_regions": []
+      }
+    },
+    "D02_large_l_tool_unscrew_and_drop": {
+      "assembly": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [
+          "square_holder_zone"
+        ],
+        "valid_target_regions": [
+          "box_tools_pair"
+        ],
+        "valid_tool_regions": [
+          "box_tools_pair"
+        ]
+      }
+    },
+    "D03_remove_tie_rod_assemblies_drop": {
+      "assembly": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [
+          "square_holder_zone"
+        ],
+        "valid_target_regions": [
+          "box_tie_rod_assemblies"
+        ],
+        "valid_tool_regions": []
+      }
+    },
+    "D04_remove_front_cover_drop": {
+      "assembly": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [
+          "square_holder_zone"
+        ],
+        "valid_target_regions": [
+          "box_front_cover"
+        ],
+        "valid_tool_regions": []
+      }
+    },
+    "D05_remove_rear_cover_drop": {
+      "assembly": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [
+          "square_holder_zone",
+          "rod_holder_zone"
+        ],
+        "valid_target_regions": [
+          "box_rear_cover"
+        ],
+        "valid_tool_regions": []
+      }
+    },
+    "D06_remove_bottom_tie_rod_nuts_drop": {
+      "assembly": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [
+          "square_holder_zone"
+        ],
+        "valid_target_regions": [
+          "box_bottom_tie_rod_nuts"
+        ],
+        "valid_tool_regions": []
+      }
+    },
+    "D07_small_l_tool_unscrew_mounting_screw_drop": {
+      "assembly": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [
+          "rod_holder_zone"
+        ],
+        "valid_target_regions": [
+          "box_tools_pair"
+        ],
+        "valid_tool_regions": [
+          "box_tools_pair"
+        ]
+      }
+    },
+    "D08a_drop_mounting_screw": {
+      "assembly": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [
+          "rod_holder_zone"
+        ],
+        "valid_target_regions": [
+          "box_mounting_screw"
+        ],
+        "valid_tool_regions": []
+      }
+    },
+    "D08b_drop_piston": {
+      "assembly": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [
+          "rod_holder_zone"
+        ],
+        "valid_target_regions": [
+          "box_piston"
+        ],
+        "valid_tool_regions": []
+      }
+    },
+    "D09_remove_cylinder_tube_drop": {
+      "assembly": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [
+          "rod_holder_zone"
+        ],
+        "valid_target_regions": [
+          "box_cylinder_tube"
+        ],
+        "valid_tool_regions": []
+      }
+    },
+    "D10_remove_piston_rod_drop": {
+      "assembly": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [
+          "rod_holder_zone"
+        ],
+        "valid_target_regions": [
+          "box_piston_rod"
+        ],
+        "valid_tool_regions": []
+      }
+    },
+    "A01_place_bottom_tie_rod_nuts": {
+      "assembly": {
+        "valid_source_regions": [
+          "box_bottom_tie_rod_nuts"
+        ],
+        "valid_target_regions": [
+          "square_holder_zone"
+        ],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      }
+    },
+    "A02_place_rear_cover": {
+      "assembly": {
+        "valid_source_regions": [
+          "box_rear_cover"
+        ],
+        "valid_target_regions": [
+          "square_holder_zone"
+        ],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      }
+    },
+    "A03_place_cylinder_tube": {
+      "assembly": {
+        "valid_source_regions": [
+          "box_cylinder_tube"
+        ],
+        "valid_target_regions": [
+          "square_holder_zone"
+        ],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      }
+    },
+    "A04_place_piston_rod_in_rod_holder": {
+      "assembly": {
+        "valid_source_regions": [
+          "box_piston_rod"
+        ],
+        "valid_target_regions": [
+          "rod_holder_zone"
+        ],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      }
+    },
+    "A05_place_piston_on_rod": {
+      "assembly": {
+        "valid_source_regions": [
+          "box_piston"
+        ],
+        "valid_target_regions": [
+          "rod_holder_zone"
+        ],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      }
+    },
+    "A06_place_mounting_screw_on_piston": {
+      "assembly": {
+        "valid_source_regions": [
+          "box_mounting_screw"
+        ],
+        "valid_target_regions": [
+          "rod_holder_zone"
+        ],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      }
+    },
+    "A07_small_l_tool_tighten_and_insert_subassembly": {
+      "assembly": {
+        "valid_source_regions": [
+          "box_tools_pair"
+        ],
+        "valid_target_regions": [
+          "square_holder_zone",
+          "rod_holder_zone"
+        ],
+        "valid_tool_regions": [
+          "box_tools_pair"
+        ]
+      },
+      "dismantle": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      }
+    },
+    "A08_place_front_cover": {
+      "assembly": {
+        "valid_source_regions": [
+          "box_front_cover"
+        ],
+        "valid_target_regions": [
+          "square_holder_zone"
+        ],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      }
+    },
+    "A09_place_long_tie_rod_assemblies": {
+      "assembly": {
+        "valid_source_regions": [
+          "box_tie_rod_assemblies"
+        ],
+        "valid_target_regions": [
+          "square_holder_zone"
+        ],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      }
+    },
+    "A10_large_l_tool_tighten_tie_rods": {
+      "assembly": {
+        "valid_source_regions": [
+          "box_tools_pair"
+        ],
+        "valid_target_regions": [
+          "square_holder_zone"
+        ],
+        "valid_tool_regions": [
+          "box_tools_pair"
+        ]
+      },
+      "dismantle": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      }
+    },
+    "A11_tighten_top_bolt": {
+      "assembly": {
+        "valid_source_regions": [
+          "box_piston_rod_nut"
+        ],
+        "valid_target_regions": [
+          "assembly_target"
+        ],
+        "valid_tool_regions": []
+      },
+      "dismantle": {
+        "valid_source_regions": [],
+        "valid_target_regions": [],
+        "valid_tool_regions": []
+      }
+    }
+  }
+}

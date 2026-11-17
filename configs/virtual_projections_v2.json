@@ -1,0 +1,586 @@
+{
+  "schema_version": "2.0",
+  "enabled": true,
+  "description": "Stage-aware virtual placement guides using top-view sprites rasterized from CAD OBJ meshes.",
+  "default_alpha": 0.42,
+  "default_color_bgr": [
+    70,
+    255,
+    90
+  ],
+  "cad_defaults": {
+    "projection_axes": [
+      "z"
+    ],
+    "rotate_deg": 90,
+    "flip_x": true,
+    "flip_y": false,
+    "fit_scale": 1.18
+  },
+  "notes": [
+    "This v2 config keeps virtual_projections_v1.json untouched.",
+    "shape=cad_top_view warps a CAD-derived transparent top-view sprite into target_region.",
+    "shape=cad_corner_instances draws four small CAD sprites at the target region corners.",
+    "projection_axes=[z] means the camera looks along CAD z, so CAD z faces the camera.",
+    "Use fit_scale > 1.0 to make the CAD guide larger than the base region, or < 1.0 to shrink it.",
+    "If a CAD sprite is still rotated or mirrored, tune rotate_deg, flip_x, and flip_y per item."
+  ],
+  "stages": {
+    "A01_place_bottom_tie_rod_nuts": {
+      "items": [
+        {
+          "part_label": "bttm_tie_rod_nut",
+          "target_region": "square_base",
+          "shape": "cad_corner_instances",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/bttm_tie_rod_nut/bttm_tie_rod_nut_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "label": "bottom nuts",
+          "alpha": 1.0,
+          "instance_size_ratio": 0.27,
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false,
+          "fit_scale": 1.18
+        }
+      ]
+    },
+    "A02_place_rear_cover": {
+      "items": [
+        {
+          "part_label": "rear_cover",
+          "target_region": "square_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/rear_cover/rear_cover_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "rear cover",
+          "alpha": 0.86,
+          "fit_scale": 1.28,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        }
+      ]
+    },
+    "A03_place_cylinder_tube": {
+      "items": [
+        {
+          "part_label": "cylinder_tube",
+          "target_region": "square_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/cylinder_tube/cylinder_tube_6dpose_cad_v3.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "cylinder tube",
+          "alpha": 0.96,
+          "fit_scale": 1.28,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        }
+      ]
+    },
+    "A04_place_piston_rod_in_rod_holder": {
+      "items": [
+        {
+          "part_label": "piston_rod",
+          "target_region": "rod_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/piston_rod/piston_rod_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "-y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "piston rod",
+          "alpha": 1.0,
+          "fit_scale": 1.68,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        }
+      ]
+    },
+    "A05_place_piston_on_rod": {
+      "items": [
+        {
+          "part_label": "piston",
+          "target_region": "rod_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/piston/piston_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "piston",
+          "alpha": 0.96,
+          "fit_scale": 2.32,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        }
+      ]
+    },
+    "A06_place_mounting_screw_on_piston": {
+      "items": [
+        {
+          "part_label": "screw",
+          "target_region": "rod_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/screw/screw_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "mounting screw",
+          "alpha": 1.0,
+          "fit_scale": 1.0,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        }
+      ]
+    },
+    "A07_small_l_tool_tighten_and_insert_subassembly": {
+      "items": [
+        {
+          "part_label": "screw",
+          "target_region": "rod_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/screw/screw_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "mounting screw",
+          "alpha": 1.0,
+          "fit_scale": 1.0,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        },
+        {
+          "part_label": "piston",
+          "target_region": "square_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/piston/piston_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "piston",
+          "alpha": 0.96,
+          "fit_scale": 1.00,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        }
+      ]
+    },
+    "A08_place_front_cover": {
+      "items": [
+        {
+          "part_label": "front_cover",
+          "target_region": "square_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/front_cover/front_cover_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "front cover",
+          "alpha": 0.92,
+          "fit_scale": 1.28,
+          "rotate_deg": 450.0,
+          "flip_x": false,
+          "flip_y": true
+        }
+      ]
+    },
+    "A09_place_long_tie_rod_assemblies": {
+      "items": [
+        {
+          "part_label": "tie_rod_assembly",
+          "target_region": "square_base",
+          "shape": "cad_corner_instances",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/tie_rod_assembly/tie_rod_nut_assembly_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "tie rods",
+          "alpha": 1.0,
+          "fit_scale": 1.18,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false,
+          "instance_size_ratio": 0.32
+        }
+      ]
+    },
+    "A10_large_l_tool_tighten_tie_rods": {
+      "items": [
+        {
+          "part_label": "tie_rod_assembly",
+          "target_region": "square_base",
+          "shape": "cad_corner_instances",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/tie_rod_assembly/tie_rod_nut_assembly_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "tie rods",
+          "alpha": 1.0,
+          "fit_scale": 1.18,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false,
+          "instance_size_ratio": 0.32
+        }
+      ]
+    },
+    "A11_tighten_top_bolt": {
+      "items": [
+        {
+          "part_label": "nut",
+          "target_region": "square_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/nut/nut_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "label": "top nuts",
+          "alpha": 1.0,
+          "instance_size_ratio": 0.22,
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false,
+          "fit_scale": 0.58
+        }
+      ]
+    },
+    "D01_remove_piston_rod_nut_drop": {
+      "items": [
+        {
+          "part_label": "nut",
+          "target_region": "square_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/nut/nut_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "label": "top nuts",
+          "alpha": 1.0,
+          "instance_size_ratio": 0.22,
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false,
+          "fit_scale": 0.58
+        }
+      ]
+    },
+    "D02_large_l_tool_unscrew_and_drop": {
+      "items": [
+        {
+          "part_label": "tie_rod_assembly",
+          "target_region": "square_base",
+          "shape": "cad_corner_instances",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/tie_rod_assembly/tie_rod_nut_assembly_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "tie rods",
+          "alpha": 1.0,
+          "fit_scale": 1.18,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false,
+          "instance_size_ratio": 0.32
+        }
+      ]
+    },
+    "D03_remove_tie_rod_assemblies_drop": {
+      "items": [
+        {
+          "part_label": "tie_rod_assembly",
+          "target_region": "square_base",
+          "shape": "cad_corner_instances",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/tie_rod_assembly/tie_rod_nut_assembly_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "tie rods",
+          "alpha": 1.0,
+          "fit_scale": 1.18,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false,
+          "instance_size_ratio": 0.32
+        }
+      ]
+    },
+    "D04_remove_front_cover_drop": {
+      "items": [
+        {
+          "part_label": "front_cover",
+          "target_region": "square_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/front_cover/front_cover_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "front cover",
+          "alpha": 0.92,
+          "fit_scale": 1.28,
+          "rotate_deg": 450.0,
+          "flip_x": false,
+          "flip_y": true
+        }
+      ]
+    },
+    "D05_remove_rear_cover_drop": {
+      "items": [
+        {
+          "part_label": "rear_cover",
+          "target_region": "square_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/rear_cover/rear_cover_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "rear cover",
+          "alpha": 0.86,
+          "fit_scale": 1.28,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        }
+      ]
+    },
+    "D06_remove_bottom_tie_rod_nuts_drop": {
+      "items": [
+        {
+          "part_label": "bttm_tie_rod_nut",
+          "target_region": "square_base",
+          "shape": "cad_corner_instances",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/bttm_tie_rod_nut/bttm_tie_rod_nut_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "label": "bottom nuts",
+          "alpha": 1.0,
+          "instance_size_ratio": 0.27,
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false,
+          "fit_scale": 1.18
+        }
+      ]
+    },
+    "D07_small_l_tool_unscrew_mounting_screw_drop": {
+      "items": [
+        {
+          "part_label": "screw",
+          "target_region": "rod_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/screw/screw_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "mounting screw",
+          "alpha": 1.0,
+          "fit_scale": 1.0,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        }
+      ]
+    },
+    "D08a_drop_mounting_screw": {
+      "items": [
+        {
+          "part_label": "screw",
+          "target_region": "rod_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/screw/screw_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "mounting screw",
+          "alpha": 1.0,
+          "fit_scale": 1.0,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        }
+      ]
+    },
+    "D08b_drop_piston": {
+      "items": [
+        {
+          "part_label": "piston",
+          "target_region": "rod_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/piston/piston_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "piston",
+          "alpha": 0.96,
+          "fit_scale": 2.32,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        }
+      ]
+    },
+    "D09_remove_cylinder_tube_drop": {
+      "items": [
+        {
+          "part_label": "cylinder_tube",
+          "target_region": "rod_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/cylinder_tube/cylinder_tube_6dpose_cad_v3.obj",
+          "projection_axes": [
+            "y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "cylinder tube",
+          "alpha": 0.96,
+          "fit_scale": 2.32,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        }
+      ]
+    },
+    "D10_remove_piston_rod_drop": {
+      "items": [
+        {
+          "part_label": "piston_rod",
+          "target_region": "rod_base",
+          "shape": "cad_top_view",
+          "mesh_path": "dependencies/cad_synth/data/pneumatic_piston/cad_pose/piston_rod/piston_rod_6dpose_cad_v2.obj",
+          "projection_axes": [
+            "-y"
+          ],
+          "cad_color_bgr": [
+            255,
+            255,
+            0
+          ],
+          "label": "piston rod",
+          "alpha": 1.0,
+          "fit_scale": 1.68,
+          "rotate_deg": 90,
+          "flip_x": true,
+          "flip_y": false
+        }
+      ]
+    }
+  }
+}
