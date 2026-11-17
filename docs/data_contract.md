@@ -1,6 +1,6 @@
 # Inputs for the release analysis script
 
-No participant observations are distributed in this code repository. Prepare cleared copies outside the repository and mount/copy them into the local `experiments/` directory when needed.
+Study datasets, recordings and model weights will be distributed through Hugging Face, with release links added to the repository README when available. No participant observations are distributed in this code repository. Download the matching release and mount/copy its cleared inputs into the local `experiments/` directory when needed.
 
 ## IDs and joins
 

@@ -2,6 +2,8 @@
 
 Prepared 17 November 2026 for the private company repository `fraunhofer-italia/vision-assembly-assistance`. The initial code-only import is authorized by the owner. No study data, weights or original repository history are included.
 
+Hugging Face is the planned distribution channel for study datasets, recordings and model weights. Public release links will be added to the README when available.
+
 ## Selection and changes
 
 The retained entrypoints cover the study UI, offline pipeline, calibration, the final statistical script, RF-DETR training, pose crop/split/training utilities and a camera-free synthetic example. Local import dependencies and relevant unit tests were retained. Legacy MotionFSM and a pose-pilot bridge remain where current imports require them; unused standalone pilots, alternative detectors/statistics, media, weights, results, caches and source Git history were excluded.

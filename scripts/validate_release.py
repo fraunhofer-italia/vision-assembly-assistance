@@ -33,7 +33,7 @@ PATTERNS = {
         r"192\.168\.\d{1,3}\.\d{1,3}|172\.(?:1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3})(?![\w.])"
     ),
     "private questionnaire crosswalk": re.compile("FORM_ID" + "_TO_SUBJECT"),
-    "team-storage link": re.compile(r"https?://[^\s/]*sharepoint\.com/", re.I),
+    "storage URL with user metadata": re.compile(r"https?://[^\s\"']+[?&](?:ovuser|user|email)=", re.I),
 }
 
 
