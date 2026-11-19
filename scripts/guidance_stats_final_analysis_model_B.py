@@ -1935,7 +1935,7 @@ def false_negative_rates(df: pd.DataFrame) -> pd.DataFrame:
     # Aggregate per participant--trial, rather than by experiment label,
     # because experiment names need not be globally unique.
     trial = (
-        df.groupby(["trial_uid", "condition"])
+        df.groupby(["trial_uid", "condition"], observed=True)
         .agg(
             n_stages=("stage_name", "size"),
             n_false_neg=("n_false_neg", "max"),
@@ -1943,7 +1943,7 @@ def false_negative_rates(df: pd.DataFrame) -> pd.DataFrame:
         .reset_index()
     )
     by_cond = (
-        trial.groupby("condition")
+        trial.groupby("condition", observed=True)
         .agg(
             n_trials=("trial_uid", "nunique"),
             n_stages=("n_stages", "sum"),

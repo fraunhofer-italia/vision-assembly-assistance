@@ -131,7 +131,7 @@
     {
       "path": "scripts/guidance_stats_final_analysis_model_B.py",
       "source_sha256": "e33930e9ece3d40dc413dc3fadd478306434053e140709447fa7818c69e2cca3",
-      "candidate_sha256": "abdc63066973501b7927b1f3da1946f1a3af29e81c6136ae239b63c2db56842b",
+      "candidate_sha256": "7f59bb284c1af7261105d44608adc06144c65fd7b4df36cec8fcaac1519a9574",
       "content_changed": true
     },
     {
@@ -764,24 +764,27 @@
     "LICENSE",
     "README.md",
     "configs/__init__.py",
+    "docs/artifacts.md",
     "docs/data_contract.md",
     "docs/licensing.md",
     "docs/release_status.md",
     "docs/verification.md",
     "pyproject.toml",
     "requirements/checks.txt",
+    "requirements/pose-dataset.txt",
     "requirements/verification.lock.txt",
     "scripts/__init__.py",
+    "scripts/prepare_pose_dataset.py",
     "scripts/validate_release.py",
     "tests/test_release_analysis_ids.py",
     "tests/test_synthetic_demo.py"
   ],
   "verification": {
-    "date": "2026-11-17",
+    "date": "2026-11-19",
     "python": "3.11.5",
-    "tests_passed": 134,
-    "cli_help_checks_passed": 19,
-    "full_study_analysis_rerun": false,
-    "camera_or_model_inference_run": false
+    "tests_passed": 135,
+    "cli_help_checks_passed": 20,
+    "full_study_analysis_rerun": true,
+    "camera_or_model_inference_run": true
   }
 }

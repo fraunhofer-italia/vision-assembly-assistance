@@ -6,7 +6,7 @@ The owner selected the **MIT License** for the project's original source code on
 | --- | --- |
 | Motion/DTW and analysis | FastDTW: MIT; NumPy/SciPy/pandas/statsmodels: BSD; PyYAML: MIT; Matplotlib: its upstream license. Exact wheel/transitive notices still need inventory. |
 | MediaPipe and OpenCV | Apache-2.0 core licenses; inspect packaged assets, contrib and codec notices. |
-| RF-DETR Small | Apache-2.0 candidate for the exact code/pretraining/checkpoint chain; verify the model-specific terms. |
+| RF-DETR Small | Apache-2.0 for Small according to upstream model terms; include the upstream license with the checkpoint. |
 | YOLO pose training/inference | Ultralytics AGPL-3.0 or an applicable Enterprise arrangement; review obligations for the integrated application and trained weights. The project's MIT license does not replace these terms. |
 | OAK-D | DepthAI Python MIT; the separate hand-tracker dependency and bundled assets require their own review. |
 | CAD/virtual projections | Meshes/generator are absent; their rights cannot be inferred from this code. |

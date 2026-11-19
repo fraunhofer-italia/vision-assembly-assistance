@@ -29,7 +29,7 @@ python scripts/main.py
 python scripts/guidance_stats_final_analysis_model_B.py --output-dir results/analysis
 ```
 
-Data, videos, calibration and model weights will be made available on **Hugging Face**; release links will be added here. See [input formats](docs/data_contract.md), [setup limitations](docs/release_status.md) and [verification](docs/verification.md). Camera and model workflows require the corresponding optional dependencies and assets; use `--help` on `scripts/main_full_pipeline.py` or `scripts/main_guidance_ui.py`.
+Datasets and weights: [Hugging Face release index](docs/artifacts.md). See [input formats](docs/data_contract.md) and [verification](docs/verification.md). Camera/model workflows require the optional dependencies; see `scripts/main_full_pipeline.py --help`.
 
 ## License
 

@@ -8,6 +8,20 @@ import pytest
 from scripts import guidance_stats_final_analysis_model_B as analysis
 
 
+def test_false_negative_rates_count_only_observed_trial_conditions():
+    frame = pd.DataFrame({
+        'trial_uid': ['1', '1', '2', '3'],
+        'condition': pd.Categorical(['full', 'full', 'mid', 'no'],
+                                    categories=['full', 'mid', 'no']),
+        'stage_name': ['A01', 'A02', 'A01', 'A01'],
+        'n_false_neg': [1, 1, 0, 0],
+    })
+    rates = analysis.false_negative_rates(frame).set_index('condition')
+    assert rates['n_trials'].to_dict() == {'full': 1, 'mid': 1, 'no': 1}
+    assert rates.loc['full', 'n_stages'] == 2
+    assert rates.loc['full', 'false_neg_per_100_stages'] == 50
+
+
 def test_numeric_metadata_and_intervention_ids_join(tmp_path):
     trial = tmp_path / "trial_1"
     trial.mkdir()
