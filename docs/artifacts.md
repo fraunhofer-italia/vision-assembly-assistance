@@ -11,7 +11,7 @@
 | Rear cover YOLOv8n-cls | [piston-rear-cover-pose](https://huggingface.co/fhi/piston-rear-cover-pose) |
 | Experimental piston rod YOLOv8n-cls | [piston-rod-pose-experimental](https://huggingface.co/fhi/piston-rod-pose-experimental) |
 
-Repositories are private during release review; Hugging Face access is required. Code and datasets use MIT. RF-DETR weights use Apache 2.0; Ultralytics weights retain AGPL-3.0 terms. See the repository cards for evaluation splits and limitations.
+Repositories are private; use a Hugging Face account with access. Code and datasets use MIT. RF-DETR weights use Apache 2.0; Ultralytics weights retain AGPL-3.0 terms. Repository cards list usage, classes and evaluation results.
 
 To run the study analysis, download `piston-assembly-study` to `data/study` and run:
 

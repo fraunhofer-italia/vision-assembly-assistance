@@ -7,7 +7,7 @@ Single-camera verification and configurable guidance for pneumatic piston assemb
 **A Vision-Based Framework for Manual Assembly Verification and Adaptive Operator Assistance**  
 Naveen Joseph Delphin, Leonardo Venturoso, Isabella Soraruf and Marco Todescato. *Manuscript draft.*
 
-Please cite this paper when using the code. Publication details and DOI will be added when available.
+Please cite this manuscript when using the code.
 
 ## Setup
 
