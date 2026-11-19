@@ -2,7 +2,7 @@
 
 Prepared 17 November 2026 for the private company repository `fraunhofer-italia/vision-assembly-assistance`. The initial code-only import is authorized by the owner. No study data, weights or original repository history are included.
 
-Hugging Face is the planned distribution channel for study datasets, recordings and model weights. Dataset/model repositories are linked in `artifacts.md`; they remain private during release review.
+Hugging Face hosts the study datasets, recordings and model weights. Dataset/model repositories are linked in `artifacts.md`; they remain private during release review.
 
 ## Selection and changes
 
